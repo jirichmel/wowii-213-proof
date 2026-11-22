@@ -1,0 +1,2 @@
+closed True connected True m 8
+searcher n=22 graph, 500 random runs: graphs 1, cases {'J': 0, 'A': 1, 'B': 0}, |B| histogram (case A) {0: 1}, exact gamma_2 checked 0, max slack None, failures 0

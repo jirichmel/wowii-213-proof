@@ -1,0 +1,13 @@
+# cdom.c lab n=4..7 (K=3 random runs per graph)
+lab n=4 (labelled closed connected non-complete: 4): graphs 4 (case J 4, case A 0 [|Y|>=m+2: 0], case B 0), runs 16, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run):
+lab n=5 (labelled closed connected non-complete: 35): graphs 35 (case J 5, case A 30 [|Y|>=m+2: 0], case B 0), runs 140, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:30
+lab n=6 (labelled closed connected non-complete: 1401): graphs 1401 (case J 1221, case A 180 [|Y|>=m+2: 0], case B 0), runs 5604, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:180
+lab n=7 (labelled closed connected non-complete: 87258): graphs 87258 (case J 84283, case A 2135 [|Y|>=m+2: 0], case B 840), runs 349032, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:2135
+# pdom.py lab n=4..6 (n=7 in py_lab7.txt)
+lab n=4 (labelled closed connected non-complete: 4): graphs 4, cases {'J': 4, 'A': 0, 'B': 0}, |B| histogram (case A) {}, exact gamma_2 checked 4, max slack -1, failures 0
+lab n=5 (labelled closed connected non-complete: 35): graphs 35, cases {'J': 5, 'A': 30, 'B': 0}, |B| histogram (case A) {0: 30}, exact gamma_2 checked 35, max slack -1, failures 0
+lab n=6 (labelled closed connected non-complete: 1401): graphs 1401, cases {'J': 1221, 'A': 180, 'B': 0}, |B| histogram (case A) {0: 180}, exact gamma_2 checked 1401, max slack -1, failures 0

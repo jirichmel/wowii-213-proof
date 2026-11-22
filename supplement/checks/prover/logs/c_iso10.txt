@@ -1,0 +1,4 @@
+iso: closed connected non-complete graphs up to isomorphism: n=2:0 n=3:0 n=4:1 n=5:2 n=6:11 n=7:49 n=8:514 n=9:7333 n=10:209149
+iso: graphs 217059 (case J 216579, case A 414 [|Y|>=m+2: 2], case B 66), runs 1302354, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:413 1:1
+./cdom iso 10 5  169.38s user 1.62s system 61% cpu 4:39.36 total

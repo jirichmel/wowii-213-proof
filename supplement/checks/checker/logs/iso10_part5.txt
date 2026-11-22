@@ -1,0 +1,9 @@
+n=2 part 0/1: connected=1 Hyp=1 nonHP=0 closed_noncomplete=0 | cases J=0 2a=0 2b=0 terminals=0 maxrounds=0 | slack: | MNT=0 MNT_closed=0 | failures so far=0
+n=3 part 0/1: connected=2 Hyp=2 nonHP=0 closed_noncomplete=0 | cases J=0 2a=0 2b=0 terminals=0 maxrounds=0 | slack: | MNT=0 MNT_closed=0 | failures so far=0
+n=4 part 0/1: connected=6 Hyp=5 nonHP=1 closed_noncomplete=1 | cases J=1 2a=0 2b=0 terminals=3 maxrounds=0 | slack: [1]=1 | MNT=1 MNT_closed=1 | failures so far=0
+n=5 part 0/1: connected=21 Hyp=11 nonHP=3 closed_noncomplete=2 | cases J=1 2a=1 2b=0 terminals=5 maxrounds=0 | slack: [0]=1 [1]=1 | MNT=1 MNT_closed=1 | failures so far=0
+n=6 part 0/1: connected=112 Hyp=57 nonHP=21 closed_noncomplete=11 | cases J=9 2a=2 2b=0 terminals=83 maxrounds=0 | slack: [-1]=2 [0]=6 [1]=3 | MNT=4 MNT_closed=4 | failures so far=0
+n=7 part 0/1: connected=853 Hyp=261 nonHP=119 closed_noncomplete=49 | cases J=43 2a=5 2b=1 terminals=438 maxrounds=0 | slack: [-2]=7 [-1]=35 [0]=5 [1]=2 | MNT=6 MNT_closed=6 | failures so far=0
+n=8 part 0/1: connected=11117 Hyp=2248 nonHP=1087 closed_noncomplete=514 | cases J=500 2a=13 2b=1 terminals=13031 maxrounds=0 | slack: [-3]=11 [-2]=245 [-1]=224 [0]=30 [1]=4 | MNT=13 MNT_closed=13 | failures so far=0
+n=9 part 0/1: connected=261080 Hyp=27724 nonHP=12653 closed_noncomplete=7333 | cases J=7266 2a=35 2b=32 terminals=206121 maxrounds=0 | slack: [-4]=66 [-3]=2683 [-2]=4392 [-1]=170 [0]=18 [1]=4 | MNT=23 MNT_closed=23 | failures so far=0
+n=10 part 5/8: connected=1466252 Hyp=109957 nonHP=29196 closed_noncomplete=25876 | cases J=25840 2a=35 2b=1 terminals=1629260 maxrounds=0 | slack: [-5]=9 [-4]=1984 [-3]=18487 [-2]=5161 [-1]=226 [0]=6 [1]=3 | MNT=10 MNT_closed=10 | failures so far=0

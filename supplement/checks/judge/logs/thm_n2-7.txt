@@ -1,0 +1,18 @@
+thm n=2 closed connected non-complete labelled: 0; gamma2>lm+1: 0; construction fails: 0
+  histogram of gamma2-lm:
+  cases (runs): 2m>=n 0, 2a 0, 2b 0; max Lemma-4 rounds 0
+thm n=3 closed connected non-complete labelled: 0; gamma2>lm+1: 0; construction fails: 0
+  histogram of gamma2-lm:
+  cases (runs): 2m>=n 0, 2a 0, 2b 0; max Lemma-4 rounds 0
+thm n=4 closed connected non-complete labelled: 4; gamma2>lm+1: 0; construction fails: 0
+  histogram of gamma2-lm: [1]=4
+  cases (runs): 2m>=n 36, 2a 0, 2b 0; max Lemma-4 rounds 0
+thm n=5 closed connected non-complete labelled: 35; gamma2>lm+1: 0; construction fails: 0
+  histogram of gamma2-lm: [0]=5 [1]=30
+  cases (runs): 2m>=n 45, 2a 270, 2b 0; max Lemma-4 rounds 0
+thm n=6 closed connected non-complete labelled: 1401; gamma2>lm+1: 0; construction fails: 0
+  histogram of gamma2-lm: [-1]=96 [0]=1110 [1]=195
+  cases (runs): 2m>=n 10989, 2a 1620, 2b 0; max Lemma-4 rounds 0
+thm n=7 closed connected non-complete labelled: 87258; gamma2>lm+1: 0; construction fails: 0
+  histogram of gamma2-lm: [-2]=6202 [-1]=78060 [0]=2681 [1]=315
+  cases (runs): 2m>=n 758547, 2a 19215, 2b 7560; max Lemma-4 rounds 0

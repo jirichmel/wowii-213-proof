@@ -1,0 +1,15 @@
+lem4 r=3 |P|=4 |Y'|=3: families (multisets) 35, failures 0
+lem4 r=3 |P|=5 |Y'|=3: families (multisets) 56, failures 0
+lem4 r=3 |P|=6 |Y'|=3: families (multisets) 84, failures 0
+lem4 r=3 |P|=6 |Y'|=4: families (multisets) 210, failures 0
+lem4 r=3 |P|=7 |Y'|=3: families (multisets) 120, failures 0
+lem4 r=3 |P|=7 |Y'|=4: families (multisets) 330, failures 0
+lem4 r=4 |P|=5 |Y'|=4: families (multisets) 3876, failures 0
+lem4 r=4 |P|=6 |Y'|=4: families (multisets) 12650, failures 0
+lem4 r=4 |P|=6 |Y'|=5: families (multisets) 65780, failures 0
+lem4 r=4 |P|=7 |Y'|=4: families (multisets) 35960, failures 0
+lem4 r=5 |P|=6 |Y'|=5: families (multisets) 1370754, failures 0
+lem4 r=5 |P|=6 |Y'|=6: families (multisets) 10737573, failures 0
+lem4 r=5 |P|=7 |Y'|=5: families (multisets) 10424128, failures 0
+lem4 r=6 |P|=5 |Y'|=6: families (multisets) 1947792, failures 0
+lem4 r=6 |P|=6 |Y'|=6: families (multisets) 61474519, failures 0

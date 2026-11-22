@@ -1,0 +1,6 @@
+n=2: closed non-complete 1 (connected 0); gamma2 > lm+1: 0 (connected 0; of form K_(n-1)+K_1: 0); example None
+n=3: closed non-complete 4 (connected 0); gamma2 > lm+1: 0 (connected 0; of form K_(n-1)+K_1: 0); example None
+n=4: closed non-complete 30 (connected 4); gamma2 > lm+1: 4 (connected 0; of form K_(n-1)+K_1: 4); example [(0, 1), (0, 2), (1, 2)]
+n=5: closed non-complete 286 (connected 35); gamma2 > lm+1: 5 (connected 0; of form K_(n-1)+K_1: 5); example [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
+n=6: closed non-complete 5455 (connected 1401); gamma2 > lm+1: 6 (connected 0; of form K_(n-1)+K_1: 6); example [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+n=7: closed non-complete 195640 (connected 87258); gamma2 > lm+1: 7 (connected 0; of form K_(n-1)+K_1: 7); example [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)]

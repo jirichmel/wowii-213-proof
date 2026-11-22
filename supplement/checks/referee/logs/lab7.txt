@@ -1,0 +1,7 @@
+lab n=7: closed connected non-complete labelled graphs = 87258
+  construction runs 349032; case1 84283, case2a 2135, case2b 840; |Y|<m in setting S: 0 runs
+  Lemma-4 rounds histogram: 0:8540
+  slack gamma2-lm-2 histogram (closed): -4:6202 -3:78060 -2:2681 -1:315
+  connected graphs 1866256, with Hyp 483928, Hyp and no HP 0; Lemma M pairs 22020096; Lemma C pairs 8300544
+  FAILURES 0
+./ref213 lab 7 3  3.42s user 0.06s system 99% cpu 3.487 total

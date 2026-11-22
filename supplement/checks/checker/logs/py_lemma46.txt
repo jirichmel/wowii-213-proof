@@ -1,0 +1,1 @@
+py lemma r=4 K=6: families=78430 max_rounds=2 failures=0

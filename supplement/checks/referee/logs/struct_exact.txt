@@ -1,0 +1,20 @@
+struct n=12: closed connected non-complete graphs 3000 (tries 9528)
+  runs 63000; case1 2611 case2a 378 case2b 11; |Y|<m runs 0
+  rounds: 0:7938
+  slack: -9:216 -8:474 -7:425 -6:479 -5:360 -4:361 -3:280 -2:260 -1:145
+  FAILURES 0
+struct n=16: closed connected non-complete graphs 3000 (tries 8938)
+  runs 63000; case1 2510 case2a 469 case2b 21; |Y|<m runs 0
+  rounds: 0:9849
+  slack: -13:132 -12:294 -11:368 -10:358 -9:321 -8:222 -7:238 -6:277 -5:268 -4:234 -3:131 -2:101 -1:56
+  FAILURES 0
+struct n=20: closed connected non-complete graphs 3000 (tries 8386)
+  runs 63000; case1 2395 case2a 573 case2b 32; |Y|<m runs 0
+  rounds: 0:12033
+  slack: -17:66 -16:186 -15:272 -14:298 -13:292 -12:244 -11:227 -10:153 -9:227 -8:204 -7:227 -6:197 -5:172 -4:105 -3:59 -2:45 -1:26
+  FAILURES 0
+struct n=22: closed connected non-complete graphs 3000 (tries 8035)
+  runs 63000; case1 2409 case2a 557 case2b 34; |Y|<m runs 0
+  rounds: 0:11697
+  slack: -19:70 -18:185 -17:260 -16:266 -15:281 -14:267 -13:230 -12:155 -11:146 -10:188 -9:201 -8:141 -7:160 -6:140 -5:109 -4:75 -3:68 -2:44 -1:14
+  FAILURES 0

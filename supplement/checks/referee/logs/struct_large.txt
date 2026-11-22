@@ -1,0 +1,20 @@
+struct n=26: closed connected non-complete graphs 20000 (tries 50941)
+  runs 420000; case1 15405 case2a 4274 case2b 321; |Y|<m runs 0
+  rounds: 0:89754
+  FAILURES 0
+struct n=30: closed connected non-complete graphs 20000 (tries 48495)
+  runs 420000; case1 15139 case2a 4495 case2b 366; |Y|<m runs 0
+  rounds: 0:94395
+  FAILURES 0
+struct n=40: closed connected non-complete graphs 20000 (tries 44761)
+  runs 420000; case1 14403 case2a 5113 case2b 484; |Y|<m runs 0
+  rounds: 0:107373
+  FAILURES 0
+struct n=50: closed connected non-complete graphs 20000 (tries 42477)
+  runs 420000; case1 13933 case2a 5518 case2b 549; |Y|<m runs 0
+  rounds: 0:115878
+  FAILURES 0
+struct n=60: closed connected non-complete graphs 20000 (tries 40472)
+  runs 420000; case1 13780 case2a 5667 case2b 553; |Y|<m runs 0
+  rounds: 0:119007
+  FAILURES 0

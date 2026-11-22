@@ -1,0 +1,25 @@
+hub n=14: closed connected non-complete graphs 3000 (tries 12655)
+  runs 93000; case1 2778 case2a 222 case2b 0; |Y|<m runs 0
+  rounds: 0:6788 1:42 2:17 3:35
+  slack: -11:76 -10:184 -9:339 -8:399 -7:436 -6:562 -5:396 -4:282 -3:98 -2:163 -1:65
+  FAILURES 0
+hub n=16: closed connected non-complete graphs 3000 (tries 9960)
+  runs 93000; case1 2764 case2a 236 case2b 0; |Y|<m runs 0
+  rounds: 0:7204 1:23 2:45 3:21 4:23
+  slack: -13:79 -12:152 -11:279 -10:292 -9:398 -8:410 -7:416 -6:371 -5:259 -4:130 -3:79 -2:92 -1:43
+  FAILURES 0
+hub n=18: closed connected non-complete graphs 3000 (tries 8597)
+  runs 93000; case1 2738 case2a 262 case2b 0; |Y|<m runs 0
+  rounds: 0:8090 1:11 2:5 3:16
+  slack: -15:86 -14:142 -13:223 -12:281 -11:343 -10:406 -9:369 -8:321 -7:277 -6:200 -5:122 -4:86 -3:58 -2:62 -1:24
+  FAILURES 0
+hub n=20: closed connected non-complete graphs 3000 (tries 7525)
+  runs 93000; case1 2702 case2a 298 case2b 0; |Y|<m runs 0
+  rounds: 0:9168 1:20 2:28 3:2 4:18 5:2
+  slack: -17:89 -16:114 -15:240 -14:239 -13:368 -12:360 -11:338 -10:298 -9:259 -8:194 -7:173 -6:109 -5:84 -4:49 -3:42 -2:26 -1:18
+  FAILURES 0
+hub n=22: closed connected non-complete graphs 3000 (tries 6865)
+  runs 93000; case1 2691 case2a 307 case2b 2; |Y|<m runs 0
+  rounds: 0:9397 1:7 2:30 3:57 4:9 5:17
+  slack: -19:93 -18:97 -17:245 -16:229 -15:362 -14:297 -13:321 -12:271 -11:245 -10:196 -9:186 -8:139 -7:112 -6:72 -5:57 -4:38 -3:21 -2:9 -1:10
+  FAILURES 0

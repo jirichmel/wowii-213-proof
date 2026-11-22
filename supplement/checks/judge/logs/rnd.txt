@@ -1,0 +1,6 @@
+rnd n=12..22: graphs kept 37261 (in Case 2a 912); construction runs: 2m>=n 710060, 2a 18240, 2b 16920; fails 0; max rounds 3
+  rounds histogram (2a runs): [0]=18202 [1]=31 [3]=7
+  exact test (n<=22): 37261 graphs, gamma2 >= lm+2 in 0
+rnd n=23..32: graphs kept 38383 (in Case 2a 722); construction runs: 2m>=n 735980, 2a 14440, 2b 17240; fails 0; max rounds 0
+  rounds histogram (2a runs): [0]=14440
+  exact test (n<=22): 0 graphs, gamma2 >= lm+2 in 0

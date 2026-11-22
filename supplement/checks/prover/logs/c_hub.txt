@@ -1,0 +1,18 @@
+hub n=12 (kept 22355 of 200000): graphs 22355 (case J 20127, case A 1638 [|Y|>=m+2: 1], case B 590), runs 134130, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:1619 1:11 2:8
+hub n=16 (kept 47259 of 200000): graphs 47259 (case J 40247, case A 5726 [|Y|>=m+2: 39], case B 1286), runs 283554, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:5676 1:20 2:16 3:12 4:2
+hub n=17 (kept 53015 of 200000): graphs 53015 (case J 42888, case A 8216 [|Y|>=m+2: 5], case B 1911), runs 318090, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:8172 1:14 2:21 3:6 4:3
+hub n=20 (kept 67432 of 200000): graphs 67432 (case J 54245, case A 11099 [|Y|>=m+2: 302], case B 2088), runs 404592, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:10977 1:43 2:28 3:24 4:18 5:9
+hub n=26 (kept 87348 of 200000): graphs 87348 (case J 65441, case A 19315 [|Y|>=m+2: 2418], case B 2592), runs 524088, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:19021 1:79 2:73 3:66 4:36 5:40
+hub n=32 (kept 97672 of 200000): graphs 97672 (case J 68287, case A 26528 [|Y|>=m+2: 6214], case B 2857), runs 586032, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:26118 1:96 2:86 3:78 4:82 5:68
+hub n=40 (kept 106513 of 200000): graphs 106513 (case J 70319, case A 33064 [|Y|>=m+2: 10551], case B 3130), runs 639078, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:32564 1:118 2:101 3:107 4:80 5:94
+hub n=50 (kept 113629 of 200000): graphs 113629 (case J 72236, case A 37969 [|Y|>=m+2: 14252], case B 3424), runs 681774, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:37435 1:101 2:123 3:110 4:112 5:88
+hub n=64 (kept 119740 of 200000): graphs 119740 (case J 73312, case A 42958 [|Y|>=m+2: 17561], case B 3470), runs 718440, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:42400 1:118 2:101 3:104 4:122 5:113

@@ -1,0 +1,6 @@
+conj n=2 labelled connected: 1; Hyp: 1; Hyp without Ham path: 0; connected non-traceable: 0; MNT (all graphs): 1, MNT not closed: 0
+conj n=3 labelled connected: 4; Hyp: 4; Hyp without Ham path: 0; connected non-traceable: 0; MNT (all graphs): 3, MNT not closed: 0
+conj n=4 labelled connected: 38; Hyp: 34; Hyp without Ham path: 0; connected non-traceable: 4; MNT (all graphs): 11, MNT not closed: 0
+conj n=5 labelled connected: 728; Hyp: 306; Hyp without Ham path: 0; connected non-traceable: 95; MNT (all graphs): 45, MNT not closed: 0
+conj n=6 labelled connected: 26704; Hyp: 13438; Hyp without Ham path: 0; connected non-traceable: 3336; MNT (all graphs): 316, MNT not closed: 0
+conj n=7 labelled connected: 1866256; Hyp: 483928; Hyp without Ham path: 0; connected non-traceable: 167244; MNT (all graphs): 3003, MNT not closed: 0

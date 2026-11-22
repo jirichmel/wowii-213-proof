@@ -1,0 +1,2 @@
+n=9 connected=261080 hypothesis=27724 non_traceable=12653 counterexamples=0 best=-1 hist=[(-6, 92), (-5, 3894), (-4, 5670), (-3, 2593), (-2, 378), (-1, 26)]
+nice -n 15 python3 -I check.py keys out/conn_n9.keys 9  275.24s user 2.84s system 27% cpu 16:38.75 total

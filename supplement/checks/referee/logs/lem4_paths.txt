@@ -1,0 +1,13 @@
+r=2 N=3 |Y'|=2: families 1, stop states 1, max rounds 0, failures 0
+r=2 N=3 |Y'|=4: families 1, stop states 6, max rounds 0, failures 0
+r=3 N=4 |Y'|=3: families 35, stop states 43, max rounds 1, failures 0
+r=3 N=5 |Y'|=3: families 56, stop states 66, max rounds 1, failures 0
+r=3 N=5 |Y'|=4: families 126, stop states 414, max rounds 1, failures 0
+r=3 N=6 |Y'|=5: families 462, stop states 3300, max rounds 1, failures 0
+r=4 N=5 |Y'|=4: families 3876, stop states 4776, max rounds 2, failures 0
+r=4 N=6 |Y'|=4: families 12650, stop states 14633, max rounds 2, failures 0
+r=4 N=5 |Y'|=5: families 15504, stop states 63230, max rounds 2, failures 0
+r=4 N=6 |Y'|=5: families 65780, stop states 273208, max rounds 2, failures 0
+r=5 N=6 |Y'|=5: families 1370754, stop states 1691390, max rounds 3, failures 0
+r=5 N=5 |Y'|=6: families 736281, stop states 3742111, max rounds 3, failures 0
+NOTE (referee): run stopped by hand during case r=6 N=7 |Y'|=6 (about 1.6e9 families, infeasible in Python). All cases printed above finished with 0 failures.

@@ -1,0 +1,25 @@
+n=6 example: connected True traceable False lm(H) 2 gamma2 at-least 3 gamma2 exactly 4
+n=7 example: connected True traceable False H-degrees [1, 2, 3, 4, 4, 5, 5] lower 4 upper 4 h5 4 gamma2 at-least 3 least exactly-two set 6
+F(4,1): closed True connected True traceable False lm 2 gamma2 3 gamma2-lm 1
+F(5,1): closed True connected True traceable False lm 2 gamma2 3 gamma2-lm 1
+F(6,1): closed True connected True traceable False lm 2 gamma2 3 gamma2-lm 1
+F(7,1): closed True connected True traceable False lm 2 gamma2 3 gamma2-lm 1
+F(8,1): closed True connected True traceable False lm 2 gamma2 3 gamma2-lm 1
+F(9,1): closed True connected True traceable False lm 2 gamma2 3 gamma2-lm 1
+F(6,2): closed True connected True traceable False lm 3 gamma2 4 gamma2-lm 1
+F(7,2): closed True connected True traceable False lm 3 gamma2 4 gamma2-lm 1
+F(8,2): closed True connected True traceable False lm 3 gamma2 4 gamma2-lm 1
+F(9,2): closed True connected True traceable False lm 3 gamma2 4 gamma2-lm 1
+F(10,2): closed True connected True traceable False lm 3 gamma2 4 gamma2-lm 1
+F(11,2): closed True connected True traceable False lm 3 gamma2 4 gamma2-lm 1
+F(8,3): closed True connected True traceable False lm 4 gamma2 5 gamma2-lm 1
+F(9,3): closed True connected True traceable False lm 4 gamma2 5 gamma2-lm 1
+F(10,3): closed True connected True traceable False lm 4 gamma2 5 gamma2-lm 1
+F(11,3): closed True connected True traceable False lm 4 gamma2 5 gamma2-lm 1
+F(12,3): closed True connected True traceable False lm 4 gamma2 5 gamma2-lm 1
+F(13,3): closed True connected True traceable False lm 4 gamma2 5 gamma2-lm 1
+K_3+K_1: closed True connected False lm 1 gamma2 3
+K_4+K_1: closed True connected False lm 1 gamma2 4
+K_5+K_1: closed True connected False lm 1 gamma2 5
+K_6+K_1: closed True connected False lm 1 gamma2 6
+K_7+K_1: closed True connected False lm 1 gamma2 7

@@ -1,0 +1,2 @@
+lab n=7 (labelled closed connected non-complete: 87258): graphs 87258, cases {'J': 84283, 'A': 2135, 'B': 840}, |B| histogram (case A) {0: 2135}, exact gamma_2 checked 87258, max slack -1, failures 0
+python3 pdom.py lab 7 2  20.80s user 0.15s system 46% cpu 44.885 total

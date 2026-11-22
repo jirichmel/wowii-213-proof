@@ -1,0 +1,1 @@
+py lab n=7: connected=1866256 closed_conn_noncomplete=87258 nonHP=167244 cases={'J': 84283, '2a': 2135, '2b': 840} sets_checked=858767 max_rounds=0 slack={-2: 6202, -1: 78060, 0: 2681, 1: 315} failures=0

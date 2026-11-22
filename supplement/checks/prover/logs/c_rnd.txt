@@ -1,0 +1,10 @@
+rnd n=10: graphs 5000 (case J 4925, case A 75 [|Y|>=m+2: 0], case B 0), runs 20000, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:75
+rnd n=12: graphs 5000 (case J 4997, case A 3 [|Y|>=m+2: 0], case B 0), runs 20000, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:3
+rnd n=16: graphs 5000 (case J 5000, case A 0 [|Y|>=m+2: 0], case B 0), runs 20000, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run):
+rnd n=24: graphs 5000 (case J 5000, case A 0 [|Y|>=m+2: 0], case B 0), runs 20000, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run):
+rnd n=40: graphs 5000 (case J 5000, case A 0 [|Y|>=m+2: 0], case B 0), runs 20000, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run):

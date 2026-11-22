@@ -1,0 +1,10 @@
+n=2 connected=1 hypothesis=1 non_traceable=0 counterexamples=0 best_slack_nt=-99  slack-hist:
+n=3 connected=2 hypothesis=2 non_traceable=0 counterexamples=0 best_slack_nt=-99  slack-hist:
+n=4 connected=6 hypothesis=5 non_traceable=1 counterexamples=0 best_slack_nt=-1  slack-hist: -1:1
+n=5 connected=21 hypothesis=11 non_traceable=3 counterexamples=0 best_slack_nt=-1  slack-hist: -2:2 -1:1
+n=6 connected=112 hypothesis=57 non_traceable=21 counterexamples=0 best_slack_nt=-1  slack-hist: -3:3 -2:11 -1:7
+n=7 connected=853 hypothesis=261 non_traceable=119 counterexamples=0 best_slack_nt=-1  slack-hist: -4:11 -3:70 -2:32 -1:6
+n=8 connected=11117 hypothesis=2248 non_traceable=1087 counterexamples=0 best_slack_nt=-1  slack-hist: -5:15 -4:393 -3:444 -2:207 -1:28
+n=9 connected=261080 hypothesis=27724 non_traceable=12653 counterexamples=0 best_slack_nt=-1  slack-hist: -6:92 -5:3894 -4:5670 -3:2593 -2:378 -1:26
+n=10 connected=11716571 hypothesis=874505 non_traceable=233999 counterexamples=0 best_slack_nt=-1  slack-hist: -7:140 -6:21035 -5:107524 -4:76536 -3:25971 -2:2672 -1:121
+nice -n 15 ./sb full 10 out10  235.74s user 4.11s system 27% cpu 14:26.88 total

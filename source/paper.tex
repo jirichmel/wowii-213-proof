@@ -1,0 +1,658 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{alltt}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hidelinks,pdftitle={A proof of Conjecture 213 of Written on the Wall II},pdfauthor={Jiri Chmel}]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}{Conjecture}
+\renewcommand{\theconjecture}{213}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\lm}{\operatorname{lm}}
+\newcommand{\Gc}{\overline{G}}
+\newcommand{\Fc}{\overline{F}}
+\newcommand{\ceil}[1]{\lceil #1\rceil}
+\newcommand{\flr}[1]{\lfloor #1\rfloor}
+
+\title{A proof of Conjecture 213 of Written on the Wall II}
+\author{Ji\v{r}\'{\i} Chmel}
+\date{22 November 2026\\[1ex]
+\small Preprint, version 1. It has not yet been fully reviewed by the author;\\
+a version reviewed by the author will follow.}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Conjecture 213 of Written on the Wall II, a list of conjectures made by the program Graffiti.pc,
+states that a connected graph $G$ on $n\ge 2$ vertices has a Hamiltonian path if the
+2-domination number of its complement exceeds the lower median of the degree sequence of the
+complement by at least two. We prove it. The core of the proof is the inequality
+$\gamma_2(\Gc)\le\lm(\Gc)+1$ for every connected, non-complete graph $G$ that is closed in the
+sense of Bondy and Chv\'atal, that is, $d(u)+d(v)\le n-2$ for all non-adjacent vertices $u$ and
+$v$. The conjecture follows because adding an edge to $G$ cannot decrease
+$\gamma_2(\Gc)-\lm(\Gc)$, and an edge-maximal graph without a Hamiltonian path is closed. The
+inequality is proved by an explicit polynomial-time construction based on a selection lemma for
+set systems. It is best possible, and so is the constant~2 in the conjecture. The proof has been
+formalised in Lean~4 with Mathlib and checked by the Lean kernel.
+\end{abstract}
+
+\section{Introduction}
+
+Written on the Wall II~\cite{wowii} is E.~DeLaVi\~na's list of conjectures made by her program
+Graffiti.pc~\cite{gpc}. Its entry 213, dated 12 January 2006 and marked open in the most recent version we could consult, concerns
+two invariants of the complement $\Gc$ of a graph $G$. The first is the 2-domination number
+$\gamma_2(\Gc)$: the least size of a set $D$ of vertices such that every vertex outside $D$ has
+at least two neighbours in~$D$~\cite{fj,dlpw}. The second is the lower median $\lm(\Gc)$ of the
+degree sequence of $\Gc$, the $\ceil{n/2}$-th smallest degree. Section~\ref{sec:defs} says why
+these are the definitions of the catalogue.
+
+\begin{conjecture}[\cite{wowii}]
+If $G$ is a simple connected graph with $n>1$ vertices such that
+$2+\lm(\Gc)\le\gamma_2(\Gc)$, then $G$ has a Hamiltonian path.
+\end{conjecture}
+
+We prove it.
+
+\begin{theorem}\label{thm:main}
+Every connected graph $G$ on $n\ge 2$ vertices with $\gamma_2(\Gc)\ge\lm(\Gc)+2$ has a
+Hamiltonian path.
+\end{theorem}
+
+The hypothesis holds for many graphs. The complete graph $K_n$ with $n\ge 2$ satisfies it, since
+$\gamma_2(\overline{K_n})=n$ and $\lm(\overline{K_n})=0$. Counted up to isomorphism, the
+connected graphs on $n=2,3,\dots,10$ vertices that satisfy it number 1, 2, 5, 11, 57, 261, 2248,
+27724 and 874505 (Section~\ref{sec:verify}).
+
+Call a graph $G$ on $n$ vertices \emph{closed} if $d(u)+d(v)\le n-2$ for any two non-adjacent
+vertices $u$ and $v$. In the language of Bondy and Chv\'atal~\cite{bc}, $G$ equals its own
+$(n-1)$-closure. Theorem~\ref{thm:main} rests on the following inequality.
+
+\begin{theorem}\label{thm:key}
+Let $G$ be a closed, connected graph on $n\ge 2$ vertices that is not complete. Then
+$\gamma_2(\Gc)\le\lm(\Gc)+1$. Moreover, a 2-dominating set of $\Gc$ with at most $\lm(\Gc)+1$
+vertices can be found in time polynomial in~$n$.
+\end{theorem}
+
+Theorem~\ref{thm:main} follows from Theorem~\ref{thm:key} by a standard reduction
+(Section~\ref{sec:reduction}). Adding an edge to $G$ cannot decrease $\gamma_2(\Gc)-\lm(\Gc)$.
+A graph without a Hamiltonian path to which no edge can be added without creating one is closed,
+by the closure argument of Bondy and Chv\'atal.
+
+The proof of Theorem~\ref{thm:key} (Sections~\ref{sec:median}--\ref{sec:proofkey}) splits
+according to $m=\lm(\Gc)$. If $2m\ge n$, a counting argument gives a 2-dominating set of size
+$m+1$ in every graph. If $2m\le n-1$, closedness forces the vertices of degree at least $m$ to
+form a clique, and the vertices of smaller degree to be adjacent to few of its non-universal
+vertices. A selection lemma for set systems (Lemma~\ref{lem:select}) then picks the set.
+
+Both constants are best possible (Section~\ref{sec:sharp}). For $s\ge 1$ and $n\ge 2s+2$ the
+graph $F(n,s)=K_s\vee\bigl((s+1)K_1\cup K_{n-2s-1}\bigr)$ is closed, connected and not complete,
+it has no Hamiltonian path, and $\gamma_2(\Fc)=\lm(\Fc)+1$. So the bound of
+Theorem~\ref{thm:key} is attained, and the constant~2 in Conjecture~213 cannot be replaced
+by~1.
+
+The proof of Theorem~\ref{thm:main} has been formalised in Lean~4 with Mathlib and checked by
+the Lean kernel (Section~\ref{sec:verify}). Appendix~\ref{app:lean} gives the formal statement.
+
+\emph{Earlier work.} In October 2026 an agent of the AI Village project (Claude Opus 5)
+studied Conjecture~213~\cite{aiv}. Its note restates the median condition in terms of the large
+degrees of~$G$, proves several structural lemmas, checks the conjecture on every connected graph
+with at most 10 vertices, and finds the graphs $F(2t+1,t-1)=K_{t-1}\vee(K_2\cup tK_1)$, $t\ge 2$, as a
+family of near misses. It states that the conjecture is not proved for any order. Qing~\cite{qing}
+proved Graffiti.pc's Conjecture 387, $\gamma_2(X)\le n-\operatorname{um}(X)+1$ for every nonempty graph $X$
+on $n$ vertices, where $\operatorname{um}(X)$ is the upper median of the degree sequence; it
+implies Lemma~\ref{lem:J} below, which, apart from a trivial case, is also a special case of an
+older inequality of Pepper~\cite{pepper,hp}. Li~\cite{li} related the domination number of the complement to
+traceability. We found no other
+work on this conjecture. The end of the paper lists the sources we consulted.
+
+\subsection{Use of generative AI}\label{sec:ai}
+
+The proof was found, and this paper was written, by Claude Opus~5.5, a generative AI system made
+by Anthropic, on 20 and 21 November 2026, in sessions directed by the author. Claude was used
+through Claude Code, Anthropic's agentic coding tool. The author chose the
+problem, set the working rules and decided which lines of work to pursue. Claude searched for
+counterexamples, found the proof of Theorem~\ref{thm:key} and the reduction of
+Theorem~\ref{thm:main} to it, wrote the programs and the Lean formalisation described in
+Section~\ref{sec:verify}, and drafted the text. Further Claude instances, writing programs of their
+own, refereed the proof by hand, re-checked its finite consequences, audited the formal statement
+against the catalogue's definitions, and checked the references against primary sources. None of
+this is external peer review. The Lean kernel's check of the formal proof does not depend on any AI
+system; that the formal statement expresses Conjecture~213 was checked as described in
+Section~\ref{sec:verify} and Appendix~\ref{app:lean}. Claude is not an author. The author takes
+full responsibility for the content of this paper. This first version is a preprint, posted on
+22 November 2026 before the author's own full review of the proofs; a version reviewed by the
+author will replace it.
+
+\section{Definitions and the reading of the statement}\label{sec:defs}
+
+Graphs are finite and simple. For a graph $G=(V,E)$ with $n=|V|$ vertices, $N(v)$ is the
+neighbourhood of a vertex $v$ and $d(v)=|N(v)|$ its degree. Two vertices are
+\emph{non-adjacent} if they are distinct and not adjacent. The complement $\Gc$ has the same
+vertex set, and two distinct vertices are adjacent in $\Gc$ if and only if they are non-adjacent
+in $G$. We write $H=\Gc$ and $d_H(v)=n-1-d(v)$. A vertex of degree $n-1$ is \emph{universal}.
+
+\emph{2-domination.} A set $D$ of vertices of a graph $X$ is \emph{2-dominating} if every vertex
+of $X$ outside $D$ has at least two neighbours in $D$. The \emph{2-domination number}
+$\gamma_2(X)$ is the least size of a 2-dominating set. The neighbours of $v$ in $H$ are the
+vertices non-adjacent to $v$ in $G$. Hence
+\begin{equation}\label{eq:twodom}
+  D\text{ is 2-dominating in }H \iff
+  \text{every }v\notin D\text{ is non-adjacent in }G\text{ to at least two vertices of }D.
+\end{equation}
+This is the case $k=2$ of $k$-domination~\cite{fj}. Definition 90 of the catalogue's definitions
+file requires each vertex to be in $D_2$ or adjacent to 2 vertices of~$D_2$~\cite{wowii}. The
+paper of DeLaVi\~na, Larson, Pepper and Waller on Graffiti.pc's conjectures about
+2-domination~\cite{dlpw} defines $k$-dominating sets with ``at least $k$'' neighbours. The
+distinction matters, because the conjecture would be false if every vertex outside $D$ had to
+have \emph{exactly} two neighbours in $D$. For example, let $G$ have vertex set $\{0,\dots,6\}$
+and edges $06,16,25,26,34,35,45,46,56$. It is connected and has no Hamiltonian path, because the
+vertices 0 and 1 are leaves at the same vertex. In $H$ the neighbourhoods are
+$N_H(0)=\{1,2,3,4,5\}$, $N_H(1)=\{0,2,3,4,5\}$, $N_H(2)=\{0,1,3,4\}$, $N_H(3)=\{0,1,2,6\}$,
+$N_H(4)=\{0,1,2\}$, $N_H(5)=\{0,1\}$ and $N_H(6)=\{3\}$. The degrees of $H$ are
+$1,2,3,4,4,5,5$, so the lower median, the upper median and the term $h_5$ discussed below all
+equal 4. The set $\{0,1,6\}$ is 2-dominating in $H$, so $\gamma_2(H)\le 3$, and $G$ does not
+satisfy the hypothesis. Now let $D$ be a set in which every vertex outside $D$ has exactly two
+$H$-neighbours in $D$. Then $6\in D$. If $5\notin D$, then $0,1\in D$, which forces first $3$,
+then $2$, then $4$ into $D$, so $|D|=6$. If $5\in D$ and neither 0 nor 1 is in $D$, then
+vertex 0 has exactly one of $2,3,4$ in $D$, and then vertex 4 or vertex 2 has only one
+$H$-neighbour in $D$, which is impossible. If $5\in D$ and, say, $0\in D$ (0 and 1 play
+symmetric roles), then $1\in D$, since otherwise $2,3,4\notin D$ and vertex 4 would have only the
+$H$-neighbour 0 in $D$; then $3$, $2$ and $4$ are forced into $D$ as before, and $D=V$. So such a
+set has at least $6=4+2$ vertices, and under the ``exactly two'' reading $G$ would satisfy the
+hypothesis, whichever median is used.
+
+\emph{Lower median.} Let $h_1\le h_2\le\dots\le h_n$ be the degrees of $H$ in nondecreasing
+order. We use
+\[
+  \lm(H)=h_{\ceil{n/2}},
+\]
+which is $h_{n/2}$ for even $n$ and the median $h_{(n+1)/2}$ for odd $n$. For even $n$ this is
+exactly the catalogue's definition 68. For odd $n$ the definition says that the lower and
+the upper median both equal the median. When it describes the median of an odd sequence, however,
+it names the term $d_{(n+1)/2+1}$. This is a slip: the median of $d_1\le\dots\le d_n$ for odd $n$
+is $d_{(n+1)/2}$, and~\cite{dlpw} defines the upper median through the statistical median. The slip does not affect our
+result. The upper median $h_{\flr{n/2}+1}$ and the term $h_{(n+3)/2}$ named by the slip are both
+at least $h_{\ceil{n/2}}$. Under either reading the hypothesis of Conjecture~213 is therefore
+stronger, and Theorem~\ref{thm:main} still applies.
+
+A \emph{Hamiltonian path} is a path through all vertices, and a graph is \emph{traceable} if it
+has one. A Hamiltonian cycle is a cycle through all vertices (of a graph with at least three
+vertices).
+
+\emph{Notation for Sections~\ref{sec:median}--\ref{sec:proofkey}.} $G$ is a graph on $n\ge 2$
+vertices, $H=\Gc$ and $m=\lm(H)$. $U$ is the set of universal vertices of $G$, and $u=|U|$.
+
+\section{Counting with the median}\label{sec:median}
+
+\begin{lemma}\label{lem:median}
+Let $t$ be an integer.
+\begin{itemize}
+\item[(i)] If $m\le t$, then at least $\ceil{n/2}$ vertices have $d_H\le t$.
+\item[(ii)] If $m\ge t$, then at least $\flr{n/2}+1$ vertices have $d_H\ge t$.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+(i) $h_1\le\dots\le h_{\ceil{n/2}}=m\le t$. (ii) $t\le m=h_{\ceil{n/2}}\le\dots\le h_n$, and
+there are $n-\ceil{n/2}+1=\flr{n/2}+1$ of these terms. In both cases the terms are the degrees
+of distinct vertices.
+\end{proof}
+
+\section{The case \texorpdfstring{$2m\ge n$}{2m >= n}}\label{sec:caseJ}
+
+\begin{lemma}\label{lem:J}
+Every graph $G$ on $n\ge 2$ vertices with $2m\ge n$ satisfies $\gamma_2(H)\le m+1$.
+\end{lemma}
+
+\begin{proof}
+Let $W=\{v: d_H(v)\ge m\}$. By Lemma~\ref{lem:median}(ii) with $t=m$,
+$|W|\ge\flr{n/2}+1\ge 1$, so some vertex has $d_H\ge m$, and $m\le n-1$. Put $a=n-m-1\ge 0$. Since
+$m\ge n/2$, $a\le n/2-1<\flr{n/2}+1\le|W|$. Choose $A\subseteq W$ with $|A|=a$ and let
+$D=V\setminus A$, so that $|D|=m+1$. A vertex $x\in A$ has at least $m$ neighbours in $H$, of
+which at most $|A|-1=n-m-2$ lie in $A$. So at least $m-(n-m-2)=2m-n+2\ge 2$ of them lie in $D$.
+Every vertex outside $D$ lies in $A$, so $D$ is 2-dominating in~$H$.
+\end{proof}
+
+For $m\le n-2$, Lemma~\ref{lem:J} is the case $k=2$, $j=n-m-1\ge 1$ of Pepper's inequality
+$\gamma_k(X)+\alpha_j(X_{\ge k+j-1})\le |V(X)|$~\cite{pepper} (see \cite[Theorem 3(i)]{hp} and
+\cite[Theorem 2.29]{hv}).
+Here $X_{\ge t}$ is the subgraph induced by the vertices of degree at least $t$, and $\alpha_j$ is the
+largest order of a vertex set inducing a subgraph of maximum degree less than $j$. With $X=H$ we
+have $k+j-1=n-m\le m$, so $W$ lies in $H_{\ge n-m}$, and any $j$ vertices of $W$ form such a set. It also follows from Qing's theorem~\cite{qing} applied to $X=H$: the upper
+median of the degree sequence of $H$ is at least $m$, and $n-m+1\le m+1$ when $2m\ge n$. For
+$m=n-1$ the lemma is trivial, since $\gamma_2(H)\le n$.
+
+\section{Closed graphs with \texorpdfstring{$2m\le n-1$}{2m <= n-1}}\label{sec:structure}
+
+In this section $G$ is closed, connected and not complete, and $2m\le n-1$. Let
+\[
+  T=\{v: d(v)\ge n-1-m\},\quad Q=\{v: d(v)\ge m\},\quad Y=V\setminus Q,\quad P=Q\setminus U,
+  \quad r=m-u+1 .
+\]
+Note that $T=\{v: d_H(v)\le m\}$.
+
+\begin{lemma}\label{lem:structure}
+In this setting the following hold.
+\begin{itemize}
+\item[(a)] $|T|\ge\ceil{n/2}$ and $T\subseteq Q$.
+\item[(b)] $Q$ is a clique of $G$.
+\item[(c)] $Y\neq\emptyset$ and $U\subseteq Q$. Every vertex $y\in Y$ is adjacent to every vertex
+  of $U$, and $u\le d(y)\le m-1$. In particular $u\le m-1$ and $r\ge 2$.
+\item[(d)] Every non-neighbour of a vertex of $Q$ lies in $Y$. Every vertex of $P$ has a
+  non-neighbour.
+\item[(e)] Every vertex of $P$ has at least two non-neighbours.
+\item[(f)] Every vertex of $Y$ has at most $r-2$ neighbours in $P$.
+\item[(g)] $V$ is the disjoint union of $U$, $P$ and $Y$.
+\item[(h)] If $|D|\ge m+1$ and $y\in Y\setminus D$, then $y$ is non-adjacent to at least two
+  vertices of~$D$.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+(a) By Lemma~\ref{lem:median}(i) with $t=m$, at least $\ceil{n/2}$ vertices have $d_H\le m$,
+that is, $d\ge n-1-m$; these form $T$. If $v\in T$, then $d(v)\ge n-1-m\ge m$ because
+$2m\le n-1$. So $T\subseteq Q$.
+
+(b) Suppose that $a,b\in Q$ are non-adjacent. Closedness gives $d(a)+d(b)\le n-2$. If $a\in T$,
+then $d(a)+d(b)\ge(n-1-m)+m=n-1$, a contradiction; the same holds if $b\in T$. So
+$a,b\notin T$. Every $t\in T$ differs from $a$ and lies in $Q$ by (a), and it is adjacent to
+$a$, since otherwise the pair $t,a$ would give the contradiction just obtained. Hence
+$d(a)\ge|T|\ge\ceil{n/2}$, and likewise $d(b)\ge\ceil{n/2}$. Then $d(a)+d(b)\ge n>n-2$, a
+contradiction.
+
+(c) If $Y$ were empty, then $Q=V$ would be a clique by (b), and $G$ would be complete. A
+universal vertex has degree $n-1\ge m$, so $U\subseteq Q$. Let $y\in Y$. Then
+$d(y)\le m-1<n-1$, so $y$ is not universal, and every universal vertex is adjacent to $y$. So
+$U\subseteq N(y)$, and $u\le d(y)\le m-1$. As $Y\ne\emptyset$, $u\le m-1$ and $r\ge 2$.
+
+(d) If $q\in Q$ and $w$ is a non-neighbour of $q$, then $w\notin Q$ by (b), so $w\in Y$. A vertex
+of $P$ is not universal, so it has a non-neighbour.
+
+(e) Let $q\in P$, and let $y$ be a non-neighbour of $q$, which exists by (d). Closedness gives
+$d(q)+d(y)\le n-2$. As $G$ is connected and $n\ge 2$, $d(y)\ge 1$. Hence $d(q)\le n-3$, and $q$
+has $n-1-d(q)\ge 2$ non-neighbours.
+
+(f) Let $y\in Y$. By (c), $U\subseteq N(y)$, and $U\cap P=\emptyset$. So
+$|N(y)\cap P|\le d(y)-u\le m-1-u=r-2$.
+
+(g) $U\subseteq Q$ by (c), $P=Q\setminus U$ and $Y=V\setminus Q$.
+
+(h) $y$ has $d(y)\le m-1$ neighbours, so at most $m-1$ vertices of $D$ are adjacent to $y$.
+The remaining $|D|-(m-1)\ge 2$ vertices of $D$ differ from $y$, because $y\notin D$, and are not
+adjacent to~$y$.
+\end{proof}
+
+\section{A selection lemma}\label{sec:select}
+
+\begin{lemma}\label{lem:select}
+Let $r\ge 2$ be an integer, let $P$ be a finite set, let $Y'$ be a finite set with $|Y'|\ge r$,
+and for each $y\in Y'$ let $A_y\subseteq P$ with $|A_y|\le r-2$. Then there are $B\subseteq P$
+and $R\subseteq Y'$ with $|B|+|R|=r$ and $|R|\ge 2$ such that
+\[
+  |\{y\in R: q\in A_y\}|\le|R|-2\qquad\text{for every }q\in P\setminus B .
+\]
+\end{lemma}
+
+\begin{proof}
+Induction on $r$. If $r=2$, every $A_y$ is empty. Take $B=\emptyset$ and any $R\subseteq Y'$
+with $|R|=2$: then $|\{y\in R: q\in A_y\}|=0=|R|-2$ for every $q\in P$.
+
+Let $r\ge 3$, and assume the statement for $r-1$. Choose $R_0\subseteq Y'$ with $|R_0|=r$. If
+$|\{y\in R_0: q\in A_y\}|\le r-2$ for every $q\in P$, take $B=\emptyset$ and $R=R_0$.
+Otherwise there is $x\in P$ with $|\{y\in R_0: x\in A_y\}|\ge r-1$. Let
+$Y''=\{y\in R_0: x\in A_y\}$, so that $|Y''|\ge r-1$. Put $P'=P\setminus\{x\}$ and
+$A'_y=A_y\setminus\{x\}$ for $y\in Y''$. Then $A'_y\subseteq P'$ and
+$|A'_y|=|A_y|-1\le(r-1)-2$. Since $r-1\ge 2$, the induction hypothesis applies to
+$r-1$, $P'$, $Y''$ and the sets $A'_y$. It gives $B'\subseteq P'$ and $R\subseteq Y''$ with
+$|B'|+|R|=r-1$ and $|R|\ge 2$, such that $|\{y\in R: q\in A'_y\}|\le|R|-2$ for every
+$q\in P'\setminus B'$. Put $B=B'\cup\{x\}$. As $x\notin P'$, $|B|+|R|=r$. Let
+$q\in P\setminus B$. Then $q\neq x$ and $q\in P'\setminus B'$. For $y\in R$ we have $q\in A_y$ if
+and only if $q\in A'_y$, because $q\ne x$. So $|\{y\in R: q\in A_y\}|\le|R|-2$.
+\end{proof}
+
+\begin{remark}\label{rem:procedure}
+Unrolled, the proof is a procedure. Start with any $r$ indices $R$ and $B=\emptyset$. While some
+$q\in P\setminus B$ has $|\{y\in R: q\in A_y\}|\ge|R|-1$, add $q$ to $B$ and replace $R$ by
+$|R|-1$ of the indices $y\in R$ with $q\in A_y$. Throughout, $|B|+|R|=r$, and $B\subseteq A_y$
+for every $y\in R$. A round starts with $|R|\ge 2$ and leaves $R$ non-empty, so afterwards
+$|B|\le r-2$, because $|A_y|\le r-2$, and hence $|R|\ge 2$ again. So there are at most $r-2$
+rounds, and the final pair $(B,R)$ satisfies Lemma~\ref{lem:select}. The set $B$ cannot always
+be empty: if $r\ge 3$, $|Y'|=r$ and all the sets $A_y$ equal one set $S$ with $|S|=r-2$, then every
+admissible choice has $B=S$ and $|R|=2$.
+\end{remark}
+
+\section{Proof of Theorem~\ref{thm:key}}\label{sec:proofkey}
+
+Let $G$ be closed, connected and not complete, with $n\ge 2$ vertices, and let $m=\lm(H)$.
+
+\emph{Case 1: $2m\ge n$.} Lemma~\ref{lem:J} gives $\gamma_2(H)\le m+1$.
+
+\emph{Case 2: $2m\le n-1$.} Then Lemma~\ref{lem:structure} applies.
+
+\emph{Case 2a: $|Y|\ge r$.} Apply Lemma~\ref{lem:select} with $r$, $P$, $Y'=Y$ and
+$A_y=N(y)\cap P$. This is possible because $r\ge 2$ by Lemma~\ref{lem:structure}(c) and
+$|A_y|\le r-2$ by Lemma~\ref{lem:structure}(f). It gives $B\subseteq P$ and $R\subseteq Y$ with
+$|B|+|R|=r$. Let $D=U\cup B\cup R$. These three sets are disjoint by
+Lemma~\ref{lem:structure}(g), so $|D|=u+r=m+1$. Let $v\notin D$. Then $v\notin U$, so $v\in Y$
+or $v\in P$. If $v\in Y$, then $v$ is non-adjacent to two vertices of $D$ by
+Lemma~\ref{lem:structure}(h). If $v\in P$, then $v\notin B$. For $y\in R$, $v\in A_y$ if and only
+if $v$ is adjacent to $y$, so by Lemma~\ref{lem:select} $v$ is adjacent to at most $|R|-2$
+vertices of $R$. So at least two
+vertices of $R$ are non-adjacent to $v$; they lie in $D$. By~\eqref{eq:twodom}, $D$ is
+2-dominating in $H$.
+
+\emph{Case 2b: $|Y|\le r-1=m-u$.} Put $c=m+1-u-|Y|\ge 1$. By Lemma~\ref{lem:structure}(g),
+$|P|=n-u-|Y|=c+(n-m-1)\ge c$. Choose $B_0\subseteq P$ with $|B_0|=c$ and let
+$D=U\cup Y\cup B_0$, so that $|D|=m+1$. A vertex outside $D$ lies in $P$. By
+Lemma~\ref{lem:structure}(e) it has at least two non-neighbours, and by
+Lemma~\ref{lem:structure}(d) all of them lie in $Y\subseteq D$. By~\eqref{eq:twodom}, $D$ is
+2-dominating in $H$.
+
+In every case $\gamma_2(H)\le m+1$. Every step is effective: the degrees, $m$ and the sets $T$,
+$Q$, $U$, $P$, $Y$ take polynomial time, the set $A$ of Lemma~\ref{lem:J} is found by sorting
+the degrees, and the procedure of Remark~\ref{rem:procedure} has at most $r-2$ rounds of
+polynomial cost. This proves Theorem~\ref{thm:key}. \qed
+
+\section{From Theorem~\ref{thm:key} to Conjecture 213}\label{sec:reduction}
+
+\begin{lemma}\label{lem:mono}
+Let $e$ be a non-edge of a graph $G$. The complement of $G+e$ is $H-e$, and
+$\gamma_2(H-e)\ge\gamma_2(H)$ and $\lm(H-e)\le\lm(H)$. In particular, if $G$ satisfies
+$\gamma_2(\Gc)\ge\lm(\Gc)+2$, then so does $G+e$.
+\end{lemma}
+
+\begin{proof}
+A 2-dominating set of $H-e$ is 2-dominating in $H$, which has more edges. Removing $e$ does not
+increase any degree. If $x_v\le z_v$ for every vertex $v$, then for every $k$ the $k$-th
+smallest $x_v$ is at most the $k$-th smallest $z_v$: the $k$ vertices with the $k$ smallest
+values $z_v$ all have $x_v$ at most the $k$-th smallest $z_v$. So $\lm(H-e)\le\lm(H)$.
+\end{proof}
+
+\begin{lemma}[Ore~\cite{ore}; Bondy and Chv\'atal~\cite{bc}]\label{lem:ore}
+Let $F$ be a graph on $N\ge 3$ vertices, and let $a,b$ be non-adjacent vertices with
+$d_F(a)+d_F(b)\ge N$. If $F+ab$ has a Hamiltonian cycle, then so has $F$.
+\end{lemma}
+
+\begin{proof}
+Suppose that $F+ab$ has a Hamiltonian cycle and $F$ has none. Then the cycle uses $ab$, and
+$F$ has a Hamiltonian path $a=v_1,v_2,\dots,v_N=b$. Let
+$S_a=\{i: 1\le i\le N-1,\ a\sim v_{i+1}\}$ and $S_b=\{i:1\le i\le N-1,\ v_i\sim b\}$. All
+neighbours of $a$ lie among $v_2,\dots,v_N$ and all neighbours of $b$ among
+$v_1,\dots,v_{N-1}$, so $|S_a|=d_F(a)$ and $|S_b|=d_F(b)$. Both sets lie in $\{1,\dots,N-1\}$,
+and $|S_a|+|S_b|\ge N$, so they have a common element $i$. Then
+$v_1v_2\cdots v_iv_Nv_{N-1}\cdots v_{i+1}v_1$ is a Hamiltonian cycle of $F$: it uses the edges
+$v_iv_N=v_ib$ and $v_{i+1}v_1=v_{i+1}a$, and $i\ne 1,N-1$ because $a$ and $b$ are
+non-adjacent. This is a contradiction.
+\end{proof}
+
+\begin{lemma}\label{lem:closure}
+Let $G$ be a graph on $n\ge 2$ vertices that has no Hamiltonian path, such that $G+e$ has one for
+every non-edge $e$. Then $G$ is closed.
+\end{lemma}
+
+\begin{proof}
+Let $G^*$ be $G$ together with a new vertex $z$ adjacent to all vertices of $G$; it has
+$N=n+1\ge 3$ vertices. $G$ has a Hamiltonian path if and only if $G^*$ has a Hamiltonian cycle:
+a path $v_1\cdots v_n$ gives the cycle $zv_1\cdots v_nz$, and deleting $z$ from a Hamiltonian
+cycle of $G^*$ leaves a Hamiltonian path of $G$. Suppose that $a,b$ are non-adjacent in $G$ and
+$d(a)+d(b)\ge n-1$. In $G^*$ they are non-adjacent with degree sum $d(a)+d(b)+2\ge N$. As $G+ab$
+has a Hamiltonian path, $(G+ab)^*=G^*+ab$ has a Hamiltonian cycle. By Lemma~\ref{lem:ore}, so
+has $G^*$, and $G$ has a Hamiltonian path, a contradiction.
+\end{proof}
+
+Lemma~\ref{lem:closure} is the path form of the stability of the Hamiltonian property under the
+$(n-1)$-closure, proved by the same construction in~\cite[Theorem 9.4]{bc}.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $G$ be connected with $n\ge 2$ vertices and $\gamma_2(\Gc)\ge\lm(\Gc)+2$, and suppose that
+$G$ has no Hamiltonian path. Add non-edges to $G$ one at a time, each time only if the new graph
+still has no Hamiltonian path, until no further non-edge can be added. The result is a graph
+$G'$ on the same vertex set that contains $G$, has no Hamiltonian path, and gets one whenever a
+non-edge is added. $G'$ is connected because it contains $G$, and it is not complete because
+$K_n$ has a Hamiltonian path. By Lemma~\ref{lem:mono}, applied at each added edge,
+$\gamma_2(\overline{G'})\ge\lm(\overline{G'})+2$. By Lemma~\ref{lem:closure}, $G'$ is closed.
+This contradicts Theorem~\ref{thm:key}.
+\end{proof}
+
+Equivalently, for $n\ge 4$ one may pass to the $(n-1)$-closure of $G$~\cite{bc}, which has a
+Hamiltonian path if and only if $G$ has one, and is closed.
+
+\section{Sharpness and remarks}\label{sec:sharp}
+
+\begin{proposition}\label{prop:sharp}
+Let $s\ge 1$ and $n\ge 2s+2$. Let $S$, $I$ and $C$ be disjoint sets with $|S|=s$, $|I|=s+1$
+and $|C|=n-2s-1$, and let $F=F(n,s)$ be the graph on $S\cup I\cup C$ in which $S\cup C$ is a
+clique, every vertex of $S$ is adjacent to every vertex of $I$, and there are no other edges.
+Then $F$ is closed, connected and not complete, it has no Hamiltonian path, and
+$\gamma_2(\Fc)=s+2=\lm(\Fc)+1$.
+\end{proposition}
+
+\begin{proof}
+The vertices of $S$ have degree $n-1$, those of $I$ degree $s$, and those of $C$ degree
+$s+(n-2s-2)=n-s-2$. $F$ is connected because $s\ge 1$, and not complete because $|I|\ge 2$. The
+non-adjacent pairs are the pairs inside $I$, with degree sum $2s\le n-2$, and the pairs $y\in I$,
+$z\in C$, with degree sum $n-2$. So $F$ is closed. Deleting $S$ leaves $s+2$ components, the
+$s+1$ vertices of $I$ and the clique $C\ne\emptyset$, whereas deleting $s$ vertices from a graph
+with a Hamiltonian path leaves at most $s+1$ components. So $F$ has no Hamiltonian path.
+
+In $\Fc$ the vertices of $S$ are isolated, $I$ is a clique, $C$ is independent, and every vertex
+of $I$ is adjacent to every vertex of $C$. The degrees of $\Fc$ are $0$ ($s$ times), $s+1$
+($n-2s-1$ times, on $C$) and $n-s-1$ ($s+1$ times, on $I$). As $n\ge 2s+2$, we have
+$s+1\le n-s-1$ and $s+1\le\ceil{n/2}\le n-s-1$, so $\lm(\Fc)=h_{\ceil{n/2}}=s+1$. Every
+2-dominating set $D$ of $\Fc$ contains $S$, whose vertices have no neighbours. If $D$ contained
+at most one vertex of $I\cup C$, then some vertex of $I\cup C$, a set of $n-s\ge 3$ vertices,
+would lie outside $D$ and have at most one neighbour in $D$. So $|D|\ge s+2$. Conversely, $S$
+together with two vertices of $I$ is 2-dominating, since every other vertex of $I\cup C$ is
+adjacent to both of them. So $\gamma_2(\Fc)=s+2$.
+\end{proof}
+
+The graphs $F(n,1)=K_1\vee(2K_1\cup K_{n-3})$, $n\ge 4$, show that the bound of
+Theorem~\ref{thm:key} is attained for every $n\ge 4$, and that for every $n\ge 4$ the inequality
+$1+\lm(\Gc)\le\gamma_2(\Gc)$ does not imply a Hamiltonian path. For $n\le 3$ every connected
+graph has one. The family $F(2t+1,t-1)$, $t\ge 2$, is the near-miss family of~\cite{aiv}.
+
+\begin{remark}
+Closedness enters only in Lemma~\ref{lem:structure}(b) and~(e). Connectivity enters in
+Lemma~\ref{lem:structure}(e), which Case~2b uses, and in the proof of Theorem~\ref{thm:main},
+where $G'$ must be connected. Non-completeness enters in Lemma~\ref{lem:structure}(c) and in the
+same proof. In the proof of Theorem~\ref{thm:key} the median enters only through
+Lemma~\ref{lem:median}, and Lemma~\ref{lem:J} holds for all graphs; the reduction also uses that $\lm$
+cannot increase when degrees decrease (Lemma~\ref{lem:mono}). Connectivity cannot be dropped from Theorem~\ref{thm:key}. For $n\ge 4$ the
+graph $K_{n-1}\cup K_1$ is closed and not complete, its complement is the star $K_{1,n-1}$, and
+$\gamma_2(K_{1,n-1})=n-1$, while $\lm(K_{1,n-1})=1$.
+\end{remark}
+
+\section{Verification}\label{sec:verify}
+
+\emph{Formal proof.} Theorem~\ref{thm:main} is formalised in Lean~4~\cite{lean}, version
+4.37.0-rc1, with Mathlib~\cite{mathlib} at revision \texttt{31ce06eaadf4}. The formalisation has
+eight files with 1642 lines (namespace \texttt{W213}), and an audit file with 160 lines. The
+theorem \texttt{W213.conjecture213Statement} proves the statement of Appendix~\ref{app:lean}.
+For it and for \texttt{W213.conjecture213}, \texttt{\#print axioms} lists only
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}, the standard axioms of
+Mathlib. No file uses \texttt{sorry}, \texttt{admit} or \texttt{native\_decide}, and none
+declares an axiom. The formal proof follows this paper, with one difference: the closure
+step (Lemmas~\ref{lem:ore} and~\ref{lem:closure}) is proved directly for Hamiltonian paths,
+without the auxiliary vertex. Table~\ref{tab:lean} lists the correspondence. Neither the polynomial
+running time in Theorem~\ref{thm:key} nor Proposition~\ref{prop:sharp} is formalised.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.3cm}p{8.4cm}l@{}}
+\toprule
+This paper & Lean (namespace \texttt{W213}) & File\\
+\midrule
+Lemma~\ref{lem:median} & \texttt{lowerMedian\_le\_iff}, \texttt{le\_lowerMedian\_iff} & \texttt{Defs.lean}\\
+Lemma~\ref{lem:J} & \texttt{lemmaJ}, \texttt{lemmaJ\_compl} & \texttt{CaseJ.lean}\\
+Lemma~\ref{lem:structure} & \texttt{setT}, \texttt{setQ}, \texttt{setY}, \dots, and the lemmas about them & \texttt{Structure.lean}\\
+Lemma~\ref{lem:select} & \texttt{selection\_lemma} & \texttt{Selection.lean}\\
+Theorem~\ref{thm:key}, the bound & \texttt{theorem1}, \texttt{corollary2} & \texttt{Theorem1.lean}\\
+Lemma~\ref{lem:mono} & \texttt{lemmaM}, \texttt{hyp\_of\_le} & \texttt{Monotone.lean}\\
+Lemmas~\ref{lem:ore}, \ref{lem:closure} & \texttt{traceable\_of\_traceable\_sup\_edge},\newline
+  \texttt{isClosedGraph\_of\_maximal\_nontraceable} & \texttt{Closure.lean}\\
+Theorem~\ref{thm:main} & \texttt{conjecture213}, \texttt{conjecture213Statement} & \texttt{Main.lean}\\
+\bottomrule
+\end{tabular}
+\caption{Statements of the paper and their formal counterparts.}\label{tab:lean}
+\end{table}
+
+A formal proof is only as good as its statement. The audit file evaluates the definitions on
+small graphs, with checks run by the kernel. $\gamma_2(K_{1,3})=3$ and $\gamma_2(P_3)=2$, which
+rules out double domination. The lower median of the degree sequence $0,0,1,1$ is $0$, which
+rules out the upper median.
+
+\emph{Computer checks.} The proofs above use no computation. As a guard against errors in the
+proofs and in the reading of the definitions, their finite consequences were also checked by
+computer. Each count below, except those of the random tests in the last item, was obtained by at
+least two programs that share no code; the
+programs and their outputs are in the supplement to this paper (the ancillary files of its arXiv
+version).
+\begin{itemize}
+\item Theorem~\ref{thm:key} for all closed, connected, non-complete graphs on $n\le 8$ labelled
+  vertices. There are none for $n\le 3$, and 4, 35, 1401, 87258 and 9007520 for $n=4,\dots,8$.
+  Up to isomorphism, for $n\le 10$, there are 1, 2, 11, 49, 514, 7333 and 209149 for
+  $n=4,\dots,10$. For every one of these graphs at least two programs confirm
+  $\gamma_2(H)\le\lm(H)+1$, by computing $\gamma_2(H)$ exactly or by checking the set built in
+  the proof against the definition. One program checked that set for every choice the proof
+  allows.
+\item Theorem~\ref{thm:main} for all connected graphs on $n\le 10$ vertices up to isomorphism:
+  the hypothesis graphs, counted in the introduction, all have a Hamiltonian path. At $n=10$
+  there are 11716571 connected graphs. The counts for $n=9$ and $n=10$ agree with those of the
+  independent census of~\cite{aiv}. For $n\le 7$ labelled vertices there are 1, 4, 34, 306,
+  13438 and 483928 hypothesis graphs for $n=2,\dots,7$, all traceable.
+\item Lemma~\ref{lem:select} for $r\le 6$ by exhaustive search over all systems of $|Y'|$
+  subsets of a set $P$ with at most 7 elements, each of size at most $r-2$, in the ranges listed
+  in the supplement; for example, there are 61474519 such systems, counted as multisets, with
+  $r=|P|=|Y'|=6$.
+\item On the small graphs above, the loop of Remark~\ref{rem:procedure} runs at most one round,
+  and only on graphs with 10 vertices. It was also run on random closed graphs with up to 64
+  vertices, generated with a structure meant to make it run; there it ran for up to 13 rounds. No
+  failure occurred.
+\end{itemize}
+
+\section*{Sources and status}
+
+We could not reach the catalogue's web site on 21 November 2026. In the Internet Archive's most
+recent capture of the list of open conjectures~\cite{wowii}, of 23 July 2026, entry 213 has the
+statement above and the status marker~O, as in the captures of 17 July 2010 and 9 November 2016;
+the newest capture of the full list, of 26 July 2026, also marks it~O. We read the
+definitions in three captures of the catalogue's definitions file (2010, 2024 and 2026), which
+agree on the four definitions that entry 213 uses. On 21 November 2026 the Formal Conjectures repository~\cite{fc} had no file, issue or pull
+request about entry 213, and a search of arXiv titles and abstracts found nothing about it; neither
+did searches of OpenAlex and of Sourcegraph's public code index. We read
+the AI Village repository~\cite{aiv} at its last commit, of 6 November 2026 (UTC$-$8). On 21 and
+22 November 2026 we searched Google Scholar for ``Conjecture 213'' together with ``Graffiti'' or
+``Written on the Wall'', for ``Hamiltonian path'' with ``lower median'' and ``complement'' (from
+2024), for ``Graffiti.pc'' with ``2-domination'' and ``Hamiltonian'', and for ``lower median'' with
+``2-domination'' and ``traceable''; we also went through the titles and summaries of all results
+from 2025 on that mention ``Written on the Wall II''. On 22 November 2026 we searched GitHub's code search for \texttt{GraphConjecture213},
+\texttt{wowii-213}, ``WOWII'' with 213, ``Written on the Wall'' with ``Conjecture 213'', and
+``Written on the Wall II'' with ``2-domination''. None of these searches found anything about entry
+213 beyond the catalogue itself. We did not search GitLab's code search, which requires a login.
+
+\begin{thebibliography}{10}
+\bibitem{aiv} AI Village, \emph{WOW-II entry 213: a structural reduction, and the order-10
+census}, working note dated 21 October 2026, file
+\path{verify/wip/notes_wow2_213_reduction_2026-10-21.md} of the repository
+\url{https://gitlab.com/ai-village-agents/village/graffiti-verification}, read at commit
+\texttt{8bd9f691fd56} of 6 November 2026 (UTC$-$8).
+
+\bibitem{bc} J.~A. Bondy and V.~Chv\'atal, A method in graph theory, \emph{Discrete Math.}
+\textbf{15} (1976) 111--135. \url{https://doi.org/10.1016/0012-365X(76)90078-9}.
+
+\bibitem{gpc} E.~DeLaVi\~na, Graffiti.pc: a variant of Graffiti, in S.~Fajtlowicz, P.~W. Fowler,
+P.~Hansen, M.~F. Janowitz and F.~S. Roberts (eds.), \emph{Graphs and Discovery}, DIMACS Ser.
+Discrete Math. Theoret. Comput. Sci.~\textbf{69}, Amer. Math. Soc., Providence, RI, 2005, 71--79.
+\url{https://doi.org/10.1090/dimacs/069/05}.
+
+\bibitem{wowii} E.~DeLaVi\~na, \emph{Written on the Wall II: Conjectures of Graffiti.pc}, entry
+213, dated 12 January 2006, and the definitions file \texttt{wowIIdefs.js}.
+\url{http://cms.uhd.edu/faculty/delavinae/research/wowII/}. Consulted on 21 November 2026 in the
+Internet Archive capture
+\url{https://web.archive.org/web/20260723211215/http://cms.uhd.edu/faculty/delavinae/research/wowII/open.html},
+and the capture of the full list
+\url{https://web.archive.org/web/20260726061534/http://cms.uhd.edu/faculty/delavinae/research/wowII/all.html}.
+
+\bibitem{dlpw} E.~DeLaVi\~na, C.~E. Larson, R.~Pepper and B.~Waller, Graffiti.pc on the
+2-domination number of a graph, \emph{Congr. Numer.} \textbf{203} (2010) 15--32. Read in the
+version at \url{https://www.uhd.edu/documents/academics/sciences/gpcon2-dominmay17.pdf}.
+
+\bibitem{fj} J.~F. Fink and M.~S. Jacobson, $n$-domination in graphs, in Y.~Alavi, G.~Chartrand,
+L.~Lesniak, D.~R. Lick and C.~E. Wall (eds.), \emph{Graph Theory with Applications to Algorithms
+and Computer Science}, Wiley, New York, 1985, 283--300.
+
+\bibitem{fc} Google DeepMind, \emph{Formal Conjectures} repository,
+\url{https://github.com/google-deepmind/formal-conjectures}, consulted 21 November 2026.
+
+\bibitem{hp} A.~Hansberg and R.~Pepper, On $k$-domination and $j$-independence in graphs,
+\emph{Discrete Appl. Math.} \textbf{161} (2013) 1472--1480. \url{https://doi.org/10.1016/j.dam.2013.02.008}.
+
+\bibitem{hv} A.~Hansberg and L.~Volkmann, Multiple domination, in T.~W. Haynes, S.~T. Hedetniemi
+and M.~A. Henning (eds.), \emph{Topics in Domination in Graphs}, Dev. Math.~\textbf{64}, Springer,
+Cham, 2020, 151--203. \url{https://doi.org/10.1007/978-3-030-51117-3_6}.
+
+\bibitem{li} R.~Li, Domination number and traceability of graphs, \emph{Discrete Math. Lett.}
+\textbf{4} (2020) 27--30. \url{https://www.dmlett.com/archive/v4/DML20_v4_p27_30.pdf}.
+
+\bibitem{lean} L.~de Moura and S.~Ullrich, The Lean 4 theorem prover and programming language,
+in \emph{Automated Deduction -- CADE 28}, Lecture Notes in Comput. Sci.~\textbf{12699},
+Springer, 2021, 625--635. \url{https://doi.org/10.1007/978-3-030-79876-5_37}.
+
+\bibitem{mathlib} The mathlib Community, The Lean mathematical library, in \emph{Proceedings of
+the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)}, ACM,
+2020, 367--381. \url{https://doi.org/10.1145/3372885.3373824}.
+
+\bibitem{ore} O.~Ore, Note on Hamilton circuits, \emph{Amer. Math. Monthly} \textbf{67} (1960)
+55. \url{https://doi.org/10.2307/2308928}.
+
+\bibitem{pepper} R.~Pepper, Implications of some observations about the $k$-domination number,
+\emph{Congr. Numer.} \textbf{206} (2010) 65--71.
+
+\bibitem{qing} J.~Qing, The 2-domination number and the upper median degree: a proof of
+Graffiti.pc Conjecture 387, arXiv:2607.27246, 28 July 2026.
+\url{https://doi.org/10.48550/arXiv.2607.27246}.
+\end{thebibliography}
+
+\appendix
+\section{The formal statement}\label{app:lean}
+
+The definitions in \texttt{LeanWowii/W213/Defs.lean}, for a finite vertex type \texttt{V} with
+decidable equality and a graph \texttt{G : SimpleGraph V} with decidable adjacency, are as
+follows; the symbol \texttt{G}$^{\mathsf c}$ is Mathlib's complement.
+\begin{alltt}\small
+def IsTwoDominating (D : Finset V) : Prop :=
+  \(\forall\) v, v \(\notin\) D \(\to\) 2 \(\le\) (D.filter (G.Adj v)).card
+theorem exists_twoDominating_card :
+  \(\exists\) k, \(\exists\) D : Finset V, IsTwoDominating G D \(\wedge\) D.card = k
+noncomputable def gamma2 : \(\mathbb{N}\) :=      -- the least such k
+  @Nat.find _ (Classical.decPred _) (exists_twoDominating_card G)
+def sortedValues (f : V \(\to\) \(\mathbb{N}\)) : List \(\mathbb{N}\) := (Finset.univ.val.map f).sort (\(\cdot\) \(\le\) \(\cdot\))
+def lowerMedianOf (f : V \(\to\) \(\mathbb{N}\)) : \(\mathbb{N}\) :=
+  (sortedValues f).getD ((Fintype.card V + 1) / 2 - 1) 0
+def lowerMedian (G : SimpleGraph V) [DecidableRel G.Adj] : \(\mathbb{N}\) :=
+  lowerMedianOf (fun v => G.degree v)
+def Traceable : Prop := \(\exists\) a b : V, \(\exists\) p : G.Walk a b, p.IsHamiltonian
+
+def Conjecture213Statement : Prop :=
+  \(\forall\) (V : Type u) [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj],
+    G.Connected \(\to\) 1 < Fintype.card V \(\to\)
+    lowerMedian G\textsuperscript{c} + 2 \(\le\) gamma2 G\textsuperscript{c} \(\to\) Traceable G
+
+theorem conjecture213Statement : Conjecture213Statement.\{u\}
+\end{alltt}
+The index \texttt{(n + 1) / 2 - 1}, with Lean's integer division, is
+$\flr{(n+1)/2}-1=\ceil{n/2}-1$; counted from $0$ in a list sorted in nondecreasing order, it
+picks the $\ceil{n/2}$-th smallest value. Mathlib's \texttt{Walk.IsHamiltonian} says that every vertex
+occurs exactly once on the walk, so a Hamiltonian walk is a Hamiltonian path.
+
+\end{document}

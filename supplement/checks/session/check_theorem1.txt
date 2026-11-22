@@ -1,0 +1,27 @@
+check_theorem1 (session agent, 21 November 2026; independent of prover-claimC's programs)
+--- ex 7 5
+n=2: 0 labelled closed connected non-complete graphs
+n=3: 0 labelled closed connected non-complete graphs
+n=4: 4 labelled closed connected non-complete graphs
+n=5: 35 labelled closed connected non-complete graphs
+n=6: 1401 labelled closed connected non-complete graphs
+n=7: 87258 labelled closed connected non-complete graphs
+graphs 88698, constructions 443490, construction failures 0, Lemma G assertion failures 0, Lemma 4 rounds 0, exact search (n <= 8): 88698 graphs, 0 without a 2-dominating set of size <= lm+1
+real 0.87
+user 0.35
+sys 0.00
+--- rnd 9 40 200000 5 1
+graphs 81135, constructions 405675, construction failures 0, Lemma G assertion failures 0, Lemma 4 rounds 0
+real 3.18
+user 1.49
+sys 0.01
+--- hub 10 60 300000 5 2
+graphs 175831, constructions 879155, construction failures 0, Lemma G assertion failures 0, Lemma 4 rounds 3
+real 7.88
+user 3.79
+sys 0.03
+--- w 10 63 3000000 20 3 (hub-W structure, closedness filtered)
+graphs 736058, constructions 14721160, construction failures 0, Lemma G assertion failures 0, Lemma 4 rounds 4178, exact search (n <= 8): 1159 graphs, 0 without a 2-dominating set of size <= lm+1
+real 5.29
+user 5.11
+sys 0.00

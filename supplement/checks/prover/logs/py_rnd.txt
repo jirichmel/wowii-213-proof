@@ -1,0 +1,11 @@
+tie-break graph: m = 6
+n=26 hub example: m = 11 |Y| = 13 u = 2, r = 10
+named: graphs 2, cases {'J': 0, 'A': 2, 'B': 0}, |B| histogram (case A) {0: 2}, exact gamma_2 checked 0, max slack None, failures 0
+rnd n=10 S=2000 seed=10: graphs 2000, cases {'J': 1011, 'A': 787, 'B': 202}, |B| histogram (case A) {0: 787}, exact gamma_2 checked 2000, max slack -1, failures 0
+rnd n=11 S=2000 seed=11: graphs 2000, cases {'J': 292, 'A': 1348, 'B': 360}, |B| histogram (case A) {0: 1348}, exact gamma_2 checked 2000, max slack -1, failures 0
+rnd n=12 S=2000 seed=12: graphs 2000, cases {'J': 901, 'A': 847, 'B': 252}, |B| histogram (case A) {0: 847}, exact gamma_2 checked 2000, max slack -1, failures 0
+rnd n=13 S=2000 seed=13: graphs 2000, cases {'J': 298, 'A': 1350, 'B': 352}, |B| histogram (case A) {0: 1350}, exact gamma_2 checked 2000, max slack -1, failures 0
+rnd n=16 S=2000 seed=16: graphs 2000, cases {'J': 781, 'A': 932, 'B': 287}, |B| histogram (case A) {0: 932}, exact gamma_2 checked 0, max slack None, failures 0
+rnd n=20 S=2000 seed=20: graphs 2000, cases {'J': 712, 'A': 1019, 'B': 269}, |B| histogram (case A) {0: 1019}, exact gamma_2 checked 0, max slack None, failures 0
+rnd n=30 S=2000 seed=30: graphs 2000, cases {'J': 604, 'A': 1180, 'B': 216}, |B| histogram (case A) {0: 1180}, exact gamma_2 checked 0, max slack None, failures 0
+rnd n=40 S=2000 seed=40: graphs 2000, cases {'J': 489, 'A': 1310, 'B': 201}, |B| histogram (case A) {0: 1310}, exact gamma_2 checked 0, max slack None, failures 0

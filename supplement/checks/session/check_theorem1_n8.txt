@@ -1,0 +1,6 @@
+--- ex 8 2 (all labelled graphs on 8 vertices; started 02:06)
+real 39.44
+user 39.27
+sys 0.08
+n=8: 9007520 labelled closed connected non-complete graphs
+graphs 9096218, constructions 18192436, construction failures 0, Lemma G assertion failures 0, Lemma 4 rounds 0, exact search (n <= 8): 9096218 graphs, 0 without a 2-dominating set of size <= lm+1

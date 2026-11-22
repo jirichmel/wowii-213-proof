@@ -1,0 +1,10 @@
+(first run, discarded: macro E_ evaluated rndi twice, giving non-symmetric adjacency; the 313 FAILs were on non-graphs. Fixed and symmetry guard added.)
+hub n=12..20: tried 169243, kept 17909 (Case 2a 3637); runs 2m>=n 713600, 2a 181850, 2b 0; fails 0; max rounds 5
+  rounds histogram (2a runs): [0]=173834 [1]=3753 [2]=2266 [3]=1170 [4]=528 [5]=299
+  exact test (n<=20): 17909 graphs, gamma2 >= lm+2 in 0
+hub n=21..32: tried 239734, kept 56023 (Case 2a 21073); runs 2m>=n 1747500, 2a 1053650, 2b 0; fails 0; max rounds 5
+  rounds histogram (2a runs): [0]=1019357 [1]=10408 [2]=8390 [3]=6712 [4]=5184 [5]=3599
+  exact test (n<=20): 0 graphs, gamma2 >= lm+2 in 0
+hub n=12..32: tried 817965, kept 147187 (Case 2a 49229); runs 2m>=n 4897900, 2a 2461450, 2b 0; fails 0; max rounds 5
+  rounds histogram (2a runs): [0]=2377588 [1]=27800 [2]=21085 [3]=15349 [4]=11873 [5]=7755
+  exact test (n<=20): 35825 graphs, gamma2 >= lm+2 in 0

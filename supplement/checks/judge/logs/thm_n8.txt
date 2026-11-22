@@ -1,0 +1,7 @@
+thm n=8 closed connected non-complete labelled: 9007520; gamma2>lm+1: 0; construction fails: 0
+  histogram of gamma2-lm: [-3]=38536 [-2]=4837840 [-1]=3937220 [0]=186420 [1]=7504
+  cases (runs): 2m>=n 80279928, 2a 757512, 2b 30240; max Lemma-4 rounds 0
+
+real	0m49.829s
+user	0m47.903s
+sys	0m0.232s

@@ -1,0 +1,48 @@
+closure n=10: graphs=2000 cases J=1976 2a=24 2b=0 terminal_sets=70191 max_rounds=0 (dives 0) exact=2000 slack: [-5]=98 [-4]=902 [-3]=665 [-2]=190 [-1]=88 [0]=45 [1]=12 case2a_capped=0 case2a_fully_explored=24 failures=0
+closure n=10: graphs=2000 cases J=1972 2a=26 2b=2 terminal_sets=68946 max_rounds=0 (dives 0) exact=2000 slack: [-5]=108 [-4]=918 [-3]=627 [-2]=191 [-1]=98 [0]=37 [1]=21 case2a_capped=0 case2a_fully_explored=26 failures=0
+closure n=10: graphs=2000 cases J=1980 2a=20 2b=0 terminal_sets=68885 max_rounds=0 (dives 0) exact=2000 slack: [-5]=109 [-4]=923 [-3]=636 [-2]=170 [-1]=99 [0]=46 [1]=17 case2a_capped=0 case2a_fully_explored=20 failures=0
+closure n=12: graphs=2000 cases J=1991 2a=8 2b=1 terminal_sets=129660 max_rounds=0 (dives 0) exact=2000 slack: [-7]=65 [-6]=767 [-5]=731 [-4]=253 [-3]=115 [-2]=40 [-1]=19 [0]=6 [1]=4 case2a_capped=0 case2a_fully_explored=8 failures=0
+closure n=12: graphs=2000 cases J=1992 2a=8 2b=0 terminal_sets=138250 max_rounds=0 (dives 0) exact=2000 slack: [-7]=77 [-6]=701 [-5]=754 [-4]=296 [-3]=111 [-2]=25 [-1]=24 [0]=7 [1]=5 case2a_capped=0 case2a_fully_explored=8 failures=0
+closure n=12: graphs=2000 cases J=1990 2a=10 2b=0 terminal_sets=141435 max_rounds=0 (dives 0) exact=2000 slack: [-7]=81 [-6]=713 [-5]=758 [-4]=279 [-3]=112 [-2]=27 [-1]=17 [0]=6 [1]=7 case2a_capped=0 case2a_fully_explored=10 failures=0
+closure n=14: graphs=2000 cases J=1996 2a=4 2b=0 terminal_sets=234275 max_rounds=0 (dives 0) exact=2000 slack: [-9]=52 [-8]=613 [-7]=773 [-6]=421 [-5]=80 [-4]=40 [-3]=13 [-2]=4 [-1]=2 [0]=2 case2a_capped=0 case2a_fully_explored=4 failures=0
+closure n=14: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=236671 max_rounds=0 (dives 0) exact=2000 slack: [-9]=57 [-8]=650 [-7]=732 [-6]=414 [-5]=82 [-4]=48 [-3]=14 [-2]=2 [0]=1 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=14: graphs=2000 cases J=1999 2a=1 2b=0 terminal_sets=238364 max_rounds=0 (dives 0) exact=2000 slack: [-9]=70 [-8]=649 [-7]=688 [-6]=442 [-5]=79 [-4]=47 [-3]=15 [-2]=9 [0]=1 case2a_capped=0 case2a_fully_explored=1 failures=0
+closure n=16: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=344915 max_rounds=0 (dives 0) exact=2000 slack: [-11]=53 [-10]=591 [-9]=713 [-8]=518 [-7]=98 [-6]=17 [-5]=6 [-4]=2 [-3]=1 [-2]=1 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=16: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=332975 max_rounds=0 (dives 0) exact=2000 slack: [-11]=45 [-10]=658 [-9]=702 [-8]=474 [-7]=99 [-6]=18 [-5]=3 [-1]=1 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=16: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=341357 max_rounds=0 (dives 0) exact=2000 slack: [-11]=50 [-10]=618 [-9]=700 [-8]=507 [-7]=99 [-6]=17 [-5]=6 [-4]=2 [-2]=1 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=18: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=433824 max_rounds=0 (dives 0) exact=2000 slack: [-13]=33 [-12]=611 [-11]=714 [-10]=501 [-9]=129 [-8]=10 [-7]=2 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=18: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=428914 max_rounds=0 (dives 0) exact=2000 slack: [-13]=40 [-12]=643 [-11]=709 [-10]=500 [-9]=105 [-8]=3 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=18: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=442155 max_rounds=0 (dives 0) exact=2000 slack: [-13]=50 [-12]=581 [-11]=697 [-10]=537 [-9]=124 [-8]=9 [-7]=1 [-3]=1 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=20: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=516001 max_rounds=0 (dives 0) exact=2000 slack: [-15]=55 [-14]=576 [-13]=695 [-12]=559 [-11]=113 [-10]=2 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=20: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=510245 max_rounds=0 (dives 0) exact=2000 slack: [-15]=43 [-14]=606 [-13]=716 [-12]=505 [-11]=124 [-10]=6 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=20: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=506004 max_rounds=0 (dives 0) exact=2000 slack: [-15]=48 [-14]=621 [-13]=684 [-12]=523 [-11]=120 [-10]=4 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=22: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=554254 max_rounds=0 (dives 0) exact=2000 slack: [-17]=51 [-16]=596 [-15]=700 [-14]=515 [-13]=132 [-12]=6 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=22: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=552939 max_rounds=0 (dives 0) exact=2000 slack: [-17]=44 [-16]=627 [-15]=661 [-14]=542 [-13]=121 [-12]=5 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=22: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=574483 max_rounds=0 (dives 0) exact=2000 slack: [-17]=38 [-16]=566 [-15]=694 [-14]=556 [-13]=139 [-12]=7 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=24: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=595372 max_rounds=0 (dives 0) exact=2000 slack: [-19]=38 [-18]=612 [-17]=707 [-16]=503 [-15]=136 [-14]=4 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=24: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=601586 max_rounds=0 (dives 0) exact=2000 slack: [-19]=51 [-18]=563 [-17]=708 [-16]=534 [-15]=141 [-14]=3 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=24: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=606879 max_rounds=0 (dives 0) exact=2000 slack: [-19]=35 [-18]=566 [-17]=701 [-16]=554 [-15]=141 [-14]=3 case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=26: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=628192 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=26: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=624068 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=26: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=628905 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=28: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=647651 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=28: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=647014 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=28: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=654902 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=30: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=658061 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=30: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=660506 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=30: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=666126 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=32: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=680810 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=32: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=679110 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=32: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=667515 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=34: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=693382 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=34: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=689984 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=34: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=686839 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=36: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=699462 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=36: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=704460 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=36: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=702048 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=38: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=722218 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=38: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=719229 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=38: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=725185 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=40: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=738490 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=40: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=741182 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0
+closure n=40: graphs=2000 cases J=2000 2a=0 2b=0 terminal_sets=743611 max_rounds=0 (dives 0) exact=0 slack: case2a_capped=0 case2a_fully_explored=0 failures=0

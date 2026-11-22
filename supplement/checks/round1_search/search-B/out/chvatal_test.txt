@@ -1,0 +1,16 @@
+  violates&slack0: 0-5 1-4 2-3 2-5 3-4 3-5 4-5
+n=6 graphs=112 chvatal_violators=40 (traceable among them 19) violators_with_slack>=0=1 hist: -3:3 -2:27 -1:9 0:1
+  violates&slack0: 0-6 1-5 2-3 2-4 2-6 3-4 3-5 3-6 4-5 4-6 5-6
+n=7 graphs=853 chvatal_violators=299 (traceable among them 180) violators_with_slack>=0=1 hist: -4:11 -3:145 -2:109 -1:33 0:1
+  violates&slack0: 0-6 0-7 1-5 1-7 2-4 2-6 3-4 3-5 3-6 3-7 4-6 4-7 5-6 5-7 6-7
+  violates&slack0: 0-7 1-6 2-4 2-5 2-7 3-4 3-5 3-6 4-5 4-6 4-7 5-6 5-7 6-7
+  violates&slack0: 0-7 1-6 2-3 2-4 2-5 2-7 3-4 3-5 3-6 4-5 4-6 4-7 5-6 5-7 6-7
+  violates&slack0: 0-7 1-6 2-4 2-5 2-7 3-4 3-5 3-6 3-7 4-5 4-6 4-7 5-6 5-7 6-7
+  violates&slack0: 0-7 1-6 2-3 2-4 2-5 2-7 3-4 3-5 3-6 3-7 4-5 4-6 4-7 5-6 5-7 6-7
+n=8 graphs=11117 chvatal_violators=4800 (traceable among them 3713) violators_with_slack>=0=5 hist: -5:15 -4:579 -3:2586 -2:1395 -1:220 0:5
+  violates&slack0: 0-7 0-8 1-6 1-8 2-5 2-7 3-4 3-5 3-6 3-8 4-5 4-6 4-7 4-8 5-7 5-8 6-7 6-8 7-8
+  violates&slack0: 0-7 0-8 1-6 1-8 2-5 2-7 3-4 3-5 3-6 3-7 3-8 4-5 4-6 4-7 4-8 5-7 5-8 6-7 6-8 7-8
+  violates&slack0: 0-8 1-7 2-4 2-5 2-6 2-8 3-4 3-5 3-6 3-7 4-5 4-6 4-7 4-8 5-6 5-7 5-8 6-7 6-8 7-8
+  violates&slack0: 0-8 1-7 2-3 2-4 2-5 2-6 2-8 3-4 3-5 3-6 3-7 4-5 4-6 4-7 4-8 5-6 5-7 5-8 6-7 6-8 7-8
+  violates&slack0: 0-7 0-8 1-6 1-8 2-5 2-7 3-4 3-7 3-8 4-5 4-6 4-7 4-8 5-6 5-7 5-8 6-7 6-8 7-8
+n=9 graphs=261080 chvatal_violators=102060 (traceable among them 89407) violators_with_slack>=0=7 hist: -6:92 -5:5926 -4:42971 -3:35039 -2:17469 -1:556 0:7

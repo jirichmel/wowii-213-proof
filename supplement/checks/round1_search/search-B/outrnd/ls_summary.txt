@@ -1,0 +1,8 @@
+localsearch n=9 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0
+localsearch n=10 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0
+localsearch n=11 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0
+localsearch n=12 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0
+localsearch n=13 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0
+localsearch n=14 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0
+localsearch n=15 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0
+localsearch n=16 iters=20000 bestscore=-7 nonF_slack>=-1_hits=0

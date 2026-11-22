@@ -1,0 +1,10 @@
+hyp n=11: connected tested=2996 with Hyp=2108 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=12: connected tested=2998 with Hyp=2117 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=13: connected tested=2999 with Hyp=1993 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=14: connected tested=3000 with Hyp=1957 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=15: connected tested=3000 with Hyp=1928 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=16: connected tested=3000 with Hyp=1939 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=17: connected tested=3000 with Hyp=1784 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=18: connected tested=3000 with Hyp=1744 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=19: connected tested=3000 with Hyp=1720 (all had a Hamiltonian path unless FAIL above) failures=0
+hyp n=20: connected tested=3000 with Hyp=1691 (all had a Hamiltonian path unless FAIL above) failures=0

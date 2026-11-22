@@ -1,0 +1,161 @@
+  anneal start score 2020
+anneal n=12: graphs=6125 cases J=802 2a=5298 2b=25 terminal_sets=55777 max_rounds=2 (dives 2) exact=6125 slack: [-4]=4 [-3]=627 [-2]=2005 [-1]=282 [0]=1358 [1]=1849 case2a_capped=0 case2a_fully_explored=5298 failures=0
+  anneal start score 2020
+anneal n=12: graphs=6339 cases J=847 2a=5476 2b=16 terminal_sets=59409 max_rounds=2 (dives 2) exact=6339 slack: [-4]=15 [-3]=674 [-2]=2019 [-1]=287 [0]=1453 [1]=1891 case2a_capped=0 case2a_fully_explored=5476 failures=0
+  anneal start score 2020
+anneal n=12: graphs=6340 cases J=782 2a=5543 2b=15 terminal_sets=56444 max_rounds=2 (dives 2) exact=6340 slack: [-4]=9 [-3]=607 [-2]=2135 [-1]=265 [0]=1378 [1]=1946 case2a_capped=0 case2a_fully_explored=5543 failures=0
+  anneal start score 2020
+anneal n=12: graphs=6427 cases J=820 2a=5584 2b=23 terminal_sets=59405 max_rounds=2 (dives 2) exact=6427 slack: [-4]=7 [-3]=637 [-2]=2142 [-1]=284 [0]=1334 [1]=2023 case2a_capped=0 case2a_fully_explored=5584 failures=0
+  anneal start score 3030
+anneal n=14: graphs=6422 cases J=570 2a=5809 2b=43 terminal_sets=83041 max_rounds=3 (dives 3) exact=6422 slack: [-5]=3 [-4]=460 [-3]=2112 [-2]=89 [-1]=132 [0]=905 [1]=2721 case2a_capped=0 case2a_fully_explored=5797 failures=0
+  anneal start score 3030
+anneal n=14: graphs=6542 cases J=555 2a=5952 2b=35 terminal_sets=85857 max_rounds=3 (dives 3) exact=6542 slack: [-5]=3 [-4]=466 [-3]=2106 [-2]=69 [-1]=117 [0]=975 [1]=2806 case2a_capped=0 case2a_fully_explored=5934 failures=0
+  anneal start score 3030
+anneal n=14: graphs=6464 cases J=517 2a=5902 2b=45 terminal_sets=86667 max_rounds=3 (dives 3) exact=6464 slack: [-5]=4 [-4]=419 [-3]=2209 [-2]=79 [-1]=149 [0]=999 [1]=2605 case2a_capped=0 case2a_fully_explored=5888 failures=0
+  anneal start score 3030
+anneal n=14: graphs=6547 cases J=600 2a=5913 2b=34 terminal_sets=86880 max_rounds=3 (dives 3) exact=6547 slack: [-5]=3 [-4]=476 [-3]=2172 [-2]=69 [-1]=160 [0]=949 [1]=2718 case2a_capped=0 case2a_fully_explored=5890 failures=0
+  anneal start score 3030
+  step 23: new max rounds 4 (score 4040)
+anneal n=16: graphs=6783 cases J=416 2a=6321 2b=46 terminal_sets=128976 max_rounds=4 (dives 4) exact=6783 slack: [-6]=2 [-5]=352 [-4]=2293 [-3]=66 [-2]=44 [-1]=92 [0]=918 [1]=3016 case2a_capped=0 case2a_fully_explored=6269 failures=0
+  anneal start score 4040
+anneal n=16: graphs=6718 cases J=413 2a=6262 2b=43 terminal_sets=126159 max_rounds=4 (dives 4) exact=6718 slack: [-6]=2 [-5]=341 [-4]=2212 [-3]=80 [-2]=43 [-1]=97 [0]=893 [1]=3050 case2a_capped=0 case2a_fully_explored=6218 failures=0
+  anneal start score 4040
+anneal n=16: graphs=6696 cases J=429 2a=6212 2b=55 terminal_sets=131423 max_rounds=4 (dives 4) exact=6696 slack: [-6]=1 [-5]=352 [-4]=2227 [-3]=68 [-2]=43 [-1]=101 [0]=986 [1]=2918 case2a_capped=0 case2a_fully_explored=6163 failures=0
+  anneal start score 3030
+  step 55: new max rounds 4 (score 4040)
+anneal n=16: graphs=6813 cases J=397 2a=6377 2b=39 terminal_sets=131769 max_rounds=4 (dives 4) exact=6813 slack: [-6]=1 [-5]=319 [-4]=2273 [-3]=71 [-2]=56 [-1]=105 [0]=975 [1]=3013 case2a_capped=0 case2a_fully_explored=6335 failures=0
+  anneal start score 3030
+  step 1943: new max rounds 4 (score 4040)
+  step 3527: new max rounds 5 (score 5050)
+anneal n=18: graphs=7253 cases J=380 2a=6829 2b=44 terminal_sets=160791 max_rounds=5 (dives 5) exact=7253 slack: [-7]=1 [-6]=330 [-5]=2420 [-4]=77 [-3]=70 [-2]=111 [-1]=182 [0]=811 [1]=3251 case2a_capped=0 case2a_fully_explored=5797 failures=0
+  anneal start score 4040
+anneal n=18: graphs=6755 cases J=47 2a=6661 2b=47 terminal_sets=108803 max_rounds=4 (dives 4) exact=6755 slack: [-6]=39 [-5]=569 [-4]=1803 [-3]=50 [-2]=49 [-1]=153 [0]=710 [1]=3382 case2a_capped=0 case2a_fully_explored=6457 failures=0
+  anneal start score 5050
+anneal n=18: graphs=7228 cases J=331 2a=6855 2b=42 terminal_sets=156880 max_rounds=5 (dives 5) exact=7228 slack: [-7]=1 [-6]=274 [-5]=2404 [-4]=70 [-3]=44 [-2]=37 [-1]=87 [0]=944 [1]=3367 case2a_capped=0 case2a_fully_explored=5870 failures=0
+  anneal start score 4040
+  step 4278: new max rounds 5 (score 5050)
+anneal n=18: graphs=7292 cases J=361 2a=6883 2b=48 terminal_sets=161909 max_rounds=5 (dives 5) exact=7292 slack: [-7]=1 [-6]=310 [-5]=2426 [-4]=83 [-3]=47 [-2]=47 [-1]=233 [0]=803 [1]=3342 case2a_capped=0 case2a_fully_explored=5869 failures=0
+  anneal start score 4040
+  step 778: new max rounds 5 (score 5050)
+anneal n=20: graphs=7178 cases J=103 2a=7034 2b=41 terminal_sets=164581 max_rounds=5 (dives 5) exact=7178 slack: [-7]=88 [-6]=836 [-5]=1743 [-4]=53 [-3]=47 [-2]=50 [-1]=187 [0]=617 [1]=3557 case2a_capped=0 case2a_fully_explored=6170 failures=0
+  anneal start score 5050
+  step 261: new max rounds 6 (score 6010)
+anneal n=20: graphs=7309 cases J=267 2a=7006 2b=36 terminal_sets=198396 max_rounds=6 (dives 6) exact=7309 slack: [-7]=232 [-6]=2425 [-5]=100 [-4]=49 [-3]=42 [-2]=34 [-1]=54 [0]=875 [1]=3498 case2a_capped=2360 case2a_fully_explored=3701 failures=0
+  anneal start score 5050
+anneal n=20: graphs=7612 cases J=276 2a=7301 2b=35 terminal_sets=246686 max_rounds=5 (dives 5) exact=7612 slack: [-8]=1 [-7]=232 [-6]=2091 [-5]=615 [-4]=71 [-3]=28 [-2]=58 [-1]=646 [0]=372 [1]=3498 case2a_capped=1 case2a_fully_explored=6244 failures=0
+  anneal start score 4041
+  step 2726: new max rounds 5 (score 5050)
+anneal n=20: graphs=7096 cases J=1 2a=7048 2b=47 terminal_sets=137831 max_rounds=5 (dives 5) exact=7096 slack: [-7]=1 [-6]=304 [-5]=2251 [-4]=62 [-3]=42 [-2]=34 [-1]=132 [0]=720 [1]=3550 case2a_capped=0 case2a_fully_explored=6142 failures=0
+  anneal start score 7070
+anneal n=22: graphs=7444 cases J=225 2a=7180 2b=39 terminal_sets=261418 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2457 case2a_fully_explored=3752 failures=0
+  anneal start score 5050
+  step 232: new max rounds 6 (score 6060)
+  step 4311: new max rounds 7 (score 7070)
+anneal n=22: graphs=7542 cases J=236 2a=7261 2b=45 terminal_sets=296454 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2554 case2a_fully_explored=3778 failures=0
+  anneal start score 5050
+  step 493: new max rounds 6 (score 6060)
+  step 8707: new max rounds 7 (score 7070)
+anneal n=22: graphs=7487 cases J=162 2a=7271 2b=54 terminal_sets=243220 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2362 case2a_fully_explored=3989 failures=0
+  anneal start score 4040
+  step 710: new max rounds 5 (score 5050)
+  step 9468: new max rounds 6 (score 6060)
+anneal n=22: graphs=7531 cases J=1 2a=7493 2b=37 terminal_sets=211177 max_rounds=6 (dives 6) exact=0 slack: case2a_capped=1181 case2a_fully_explored=5324 failures=0
+  anneal start score 7070
+anneal n=24: graphs=6951 cases J=179 2a=6737 2b=35 terminal_sets=266663 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2399 case2a_fully_explored=3096 failures=0
+  anneal start score 6060
+  step 5265: new max rounds 7 (score 7010)
+anneal n=24: graphs=7995 cases J=269 2a=7692 2b=34 terminal_sets=437183 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2751 case2a_fully_explored=3737 failures=0
+  anneal start score 6060
+  step 20: new max rounds 7 (score 7070)
+  step 11892: new max rounds 8 (score 8010)
+anneal n=24: graphs=7203 cases J=185 2a=6976 2b=42 terminal_sets=259940 max_rounds=8 (dives 8) exact=0 slack: case2a_capped=2450 case2a_fully_explored=3429 failures=0
+  anneal start score 5050
+  step 592: new max rounds 6 (score 6060)
+  step 6035: new max rounds 7 (score 7070)
+anneal n=24: graphs=8032 cases J=199 2a=7790 2b=43 terminal_sets=518194 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2782 case2a_fully_explored=3990 failures=0
+  anneal start score 5050
+  step 437: new max rounds 6 (score 6060)
+  step 724: new max rounds 7 (score 7070)
+anneal n=26: graphs=8505 cases J=313 2a=8149 2b=43 terminal_sets=889276 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=3102 case2a_fully_explored=4024 failures=0
+  anneal start score 7070
+  step 6666: new max rounds 8 (score 8010)
+anneal n=26: graphs=7501 cases J=0 2a=7472 2b=29 terminal_sets=245511 max_rounds=8 (dives 8) exact=0 slack: case2a_capped=2378 case2a_fully_explored=4127 failures=0
+  anneal start score 7070
+  step 244: new max rounds 8 (score 8080)
+anneal n=26: graphs=8099 cases J=232 2a=7836 2b=31 terminal_sets=432723 max_rounds=8 (dives 8) exact=0 slack: case2a_capped=2841 case2a_fully_explored=4048 failures=0
+  anneal start score 5051
+  step 3688: new max rounds 6 (score 6060)
+  step 15634: new max rounds 7 (score 7010)
+anneal n=26: graphs=7401 cases J=0 2a=7362 2b=39 terminal_sets=419028 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2167 case2a_fully_explored=3520 failures=0
+  anneal start score 8080
+anneal n=28: graphs=8134 cases J=0 2a=8086 2b=48 terminal_sets=402826 max_rounds=8 (dives 8) exact=0 slack: case2a_capped=2784 case2a_fully_explored=4400 failures=0
+  anneal start score 9090
+anneal n=28: graphs=8404 cases J=198 2a=8171 2b=35 terminal_sets=436417 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2958 case2a_fully_explored=4318 failures=0
+  anneal start score 7070
+  step 4490: new max rounds 8 (score 8080)
+  step 12225: new max rounds 9 (score 9010)
+anneal n=28: graphs=7917 cases J=159 2a=7716 2b=42 terminal_sets=519410 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2853 case2a_fully_explored=3683 failures=0
+  anneal start score 7070
+anneal n=28: graphs=6538 cases J=0 2a=6496 2b=42 terminal_sets=263449 max_rounds=7 (dives 7) exact=0 slack: case2a_capped=2204 case2a_fully_explored=2762 failures=0
+  anneal start score 9090
+anneal n=30: graphs=8131 cases J=0 2a=8086 2b=45 terminal_sets=425233 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2845 case2a_fully_explored=4409 failures=0
+  anneal start score 8080
+  step 14151: new max rounds 9 (score 9010)
+anneal n=30: graphs=7766 cases J=0 2a=7725 2b=41 terminal_sets=412730 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2718 case2a_fully_explored=3930 failures=0
+  anneal start score 9090
+anneal n=30: graphs=8694 cases J=245 2a=8415 2b=34 terminal_sets=922854 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=3329 case2a_fully_explored=4132 failures=0
+  anneal start score 9081
+anneal n=30: graphs=6555 cases J=1 2a=6514 2b=40 terminal_sets=225002 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2300 case2a_fully_explored=3073 failures=0
+  anneal start score 8080
+  step 3759: new max rounds 9 (score 9010)
+anneal n=32: graphs=8018 cases J=0 2a=7983 2b=35 terminal_sets=388655 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2577 case2a_fully_explored=4554 failures=0
+  anneal start score 9091
+  step 5983: new max rounds 10 (score 10100)
+anneal n=32: graphs=7756 cases J=124 2a=7598 2b=34 terminal_sets=518821 max_rounds=10 (dives 10) exact=0 slack: case2a_capped=2779 case2a_fully_explored=3583 failures=0
+  anneal start score 8080
+  step 13652: new max rounds 9 (score 9090)
+anneal n=32: graphs=8397 cases J=0 2a=8359 2b=38 terminal_sets=679101 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2868 case2a_fully_explored=4605 failures=0
+  anneal start score 9091
+  step 174: new max rounds 10 (score 10101)
+  step 2409: new max rounds 11 (score 11110)
+anneal n=32: graphs=8529 cases J=137 2a=8354 2b=38 terminal_sets=516859 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=3062 case2a_fully_explored=4435 failures=0
+  anneal start score 9090
+anneal n=34: graphs=3667 cases J=0 2a=3641 2b=26 terminal_sets=797196 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2562 case2a_fully_explored=313 failures=0
+  anneal start score 10100
+anneal n=34: graphs=8275 cases J=0 2a=8242 2b=33 terminal_sets=444696 max_rounds=10 (dives 10) exact=0 slack: case2a_capped=2636 case2a_fully_explored=4809 failures=0
+  anneal start score 11110
+  step 9809: new max rounds 12 (score 12010)
+anneal n=34: graphs=7885 cases J=0 2a=7853 2b=32 terminal_sets=260136 max_rounds=12 (dives 12) exact=0 slack: case2a_capped=2612 case2a_fully_explored=4398 failures=0
+  anneal start score 8080
+  step 149: new max rounds 9 (score 9090)
+anneal n=34: graphs=8584 cases J=0 2a=8549 2b=35 terminal_sets=912263 max_rounds=9 (dives 9) exact=0 slack: case2a_capped=2978 case2a_fully_explored=4712 failures=0
+  anneal start score 10100
+  step 2143: new max rounds 11 (score 11110)
+anneal n=36: graphs=7496 cases J=122 2a=7335 2b=39 terminal_sets=477176 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=2749 case2a_fully_explored=3217 failures=0
+  anneal start score 11110
+  step 3355: new max rounds 12 (score 12120)
+anneal n=36: graphs=9000 cases J=112 2a=8861 2b=27 terminal_sets=1014234 max_rounds=12 (dives 12) exact=0 slack: case2a_capped=3418 case2a_fully_explored=4587 failures=0
+  anneal start score 11101
+anneal n=36: graphs=6366 cases J=0 2a=6334 2b=32 terminal_sets=390345 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=2475 case2a_fully_explored=3053 failures=0
+  anneal start score 9090
+  step 13855: new max rounds 10 (score 10010)
+anneal n=36: graphs=7888 cases J=0 2a=7861 2b=27 terminal_sets=388558 max_rounds=10 (dives 10) exact=0 slack: case2a_capped=2527 case2a_fully_explored=4352 failures=0
+  anneal start score 9090
+  step 167: new max rounds 10 (score 10100)
+  step 11463: new max rounds 11 (score 11010)
+anneal n=38: graphs=8431 cases J=0 2a=8399 2b=32 terminal_sets=1188420 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=3044 case2a_fully_explored=4413 failures=0
+  anneal start score 12120
+anneal n=38: graphs=7598 cases J=97 2a=7470 2b=31 terminal_sets=452428 max_rounds=12 (dives 12) exact=0 slack: case2a_capped=2803 case2a_fully_explored=3276 failures=0
+  anneal start score 10100
+  step 2151: new max rounds 11 (score 11010)
+anneal n=38: graphs=8268 cases J=0 2a=8234 2b=34 terminal_sets=397559 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=2625 case2a_fully_explored=4948 failures=0
+  anneal start score 10101
+anneal n=38: graphs=9135 cases J=1 2a=9099 2b=35 terminal_sets=1817409 max_rounds=10 (dives 10) exact=0 slack: case2a_capped=3454 case2a_fully_explored=4801 failures=0
+  anneal start score 10100
+anneal n=40: graphs=7686 cases J=0 2a=7656 2b=30 terminal_sets=364962 max_rounds=10 (dives 10) exact=0 slack: case2a_capped=2356 case2a_fully_explored=4405 failures=0
+  anneal start score 11110
+anneal n=40: graphs=4265 cases J=0 2a=4231 2b=34 terminal_sets=1904649 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=3268 case2a_fully_explored=181 failures=0
+  anneal start score 11110
+anneal n=40: graphs=4623 cases J=0 2a=4598 2b=25 terminal_sets=2015614 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=3444 case2a_fully_explored=366 failures=0
+  anneal start score 11110
+anneal n=40: graphs=4071 cases J=0 2a=4038 2b=33 terminal_sets=390918 max_rounds=11 (dives 11) exact=0 slack: case2a_capped=2423 case2a_fully_explored=146 failures=0

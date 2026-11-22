@@ -1,0 +1,12 @@
+anneal n=16 steps=300000 best score 7.0: graphs 48968 (case J 37404, case A 11564 [|Y|>=m+2: 0], case B 0), runs 391748, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:11564
+anneal n=17 steps=300000 best score 6.0: graphs 54108 (case J 8298, case A 45810 [|Y|>=m+2: 127], case B 0), runs 432868, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:45810
+anneal n=20 steps=300000 best score 6.0: graphs 70560 (case J 1325, case A 69235 [|Y|>=m+2: 40369], case B 0), runs 564484, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:69235
+anneal n=24 steps=300000 best score 6.0: graphs 71335 (case J 276, case A 71059 [|Y|>=m+2: 57186], case B 0), runs 570684, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:71059
+anneal n=32 steps=300000 best score 6.0: graphs 80101 (case J 19, case A 80082 [|Y|>=m+2: 76952], case B 0), runs 640812, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:80082
+anneal n=48 steps=300000 best score 6.0: graphs 113746 (case J 11, case A 113735 [|Y|>=m+2: 113541], case B 0), runs 909972, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:113735

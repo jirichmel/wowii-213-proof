@@ -1,0 +1,44 @@
+Sat Nov 21 12:38:18 CET 2026
+warning: LeanWowii/W213/Defs.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LeanWowii/W213/Defs.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LeanWowii/W213/Defs.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LeanWowii/W213/Defs.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (18308 jobs).
+== axioms (Audit.lean) ==
+'W213.conjecture213Statement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'W213.conjecture213' depends on axioms: [propext, Classical.choice, Quot.sound]
+def W213.Conjecture213Statement.{u} : Prop :=
+∀ (V : Type u) [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+  G.Connected → 1 < Fintype.card V → lowerMedian Gᶜ + 2 ≤ gamma2 Gᶜ → Traceable G
+def W213.Traceable.{u_1} : {V : Type u_1} → [DecidableEq V] → SimpleGraph V → Prop :=
+fun {V} [DecidableEq V] G => ∃ a b p, p.IsHamiltonian
+def W213.IsTwoDominating.{u_1} : {V : Type u_1} → (G : SimpleGraph V) → [DecidableRel G.Adj] → Finset V → Prop :=
+fun {V} G [DecidableRel G.Adj] D => ∀ v ∉ D, 2 ≤ #(filter (G.Adj v) D)
+def W213.lowerMedianOf.{u_1} : {V : Type u_1} → [Fintype V] → (V → ℕ) → ℕ :=
+fun {V} [Fintype V] f => (sortedValues f).getD ((Fintype.card V + 1) / 2 - 1) 0
+[1, 1, 2, 2]
+1
+1
+[0, 1, 1, 2, 2]
+1
+1
+[0, 0, 2, 2, 2, 2]
+2
+[0, 0, 1, 1]
+0
+[2, 2, 3, 3]
+2
+3
+2
+3
+4
+2
+'W213.Audit.gamma2_eq_gamma2c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'W213.Audit.lowerMedian_eq_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+Sat Nov 21 12:38:50 CET 2026
+
+== Build of this supplement folder itself, 21 November 2026, 13:20 ==
+(fresh copy of lean/ with Mathlib's packages linked in; comments edited and LeanWowii.lean added)
+lake build: Build completed successfully (18309 jobs).
+'W213.conjecture213Statement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'W213.conjecture213' depends on axioms: [propext, Classical.choice, Quot.sound]

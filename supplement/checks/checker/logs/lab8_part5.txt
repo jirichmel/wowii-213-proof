@@ -1,0 +1,4 @@
+n=8 part 5/8: connected=31974656 closed_conn_noncomplete=655542 nonHP_connected=1096076 nonHP_with_Hyp=0
+  cases: J=646954 2a=8204 2b=384; terminal sets checked=17569151; max rounds=0; closed with Hyp=0
+  slack gamma2-lm histogram: [-3]=1730 [-2]=312242 [-1]=324749 [0]=16199 [1]=622
+  failures=0

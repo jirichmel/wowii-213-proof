@@ -1,0 +1,33 @@
+n=11 nonpath trees=234
+m=10 level=234 next=1781
+m=11 level=1781 next=8452
+m=12 level=8452 next=30175
+m=13 level=30175 next=85494
+m=14 level=85494 next=196525
+m=15 level=196525 next=371715
+m=16 level=371715 next=587499
+m=17 level=587499 next=788620
+m=18 level=788620 next=912607
+m=19 level=912607 next=922017
+m=20 level=922017 next=821725
+m=21 level=821725 next=651289
+m=22 level=651289 next=461964
+m=23 level=461964 next=294947
+m=24 level=294947 next=170340
+m=25 level=170340 next=89420
+m=26 level=89420 next=42923
+m=27 level=42923 next=18957
+m=28 level=18957 next=7754
+m=29 level=7754 next=2971
+m=30 level=2971 next=1082
+m=31 level=1082 next=373
+m=32 level=373 next=125
+m=33 level=125 next=43
+m=34 level=43 next=15
+m=35 level=15 next=5
+m=36 level=5 next=2
+m=37 level=2 next=1
+m=38 level=1 next=0
+n=11 connected=6469055 hypothesis=0 non_traceable=6469055 counterexamples=0 best_slack_nt=-1  slack-hist: -8:1305 -7:376545 -6:2765309 -5:2340959 -4:882206 -3:97940 -2:4670 -1:121
+maximal non-traceable connected graphs: 109
+nice -n 15 ./sb nt 11 outnt11  812.27s user 10.81s system 33% cpu 41:09.44 total

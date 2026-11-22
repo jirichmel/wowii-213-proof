@@ -1,0 +1,14 @@
+shape n=12 (kept 13871 of 50000): graphs 13871 (case J 5377, case A 6621 [|Y|>=m+2: 0], case B 1873), runs 83226, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:6621
+shape n=16 (kept 14051 of 50000): graphs 14051 (case J 4532, case A 7318 [|Y|>=m+2: 0], case B 2201), runs 84306, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:7318
+shape n=20 (kept 13902 of 50000): graphs 13902 (case J 3721, case A 8051 [|Y|>=m+2: 1], case B 2130), runs 83412, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:8051
+shape n=26 (kept 13789 of 50000): graphs 13789 (case J 3026, case A 8858 [|Y|>=m+2: 4], case B 1905), runs 82734, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:8858
+shape n=32 (kept 13527 of 50000): graphs 13527 (case J 2349, case A 9432 [|Y|>=m+2: 11], case B 1746), runs 81162, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:9432
+shape n=40 (kept 13122 of 50000): graphs 13122 (case J 1908, case A 9707 [|Y|>=m+2: 27], case B 1507), runs 78732, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:9707
+shape n=64 (kept 13560 of 50000): graphs 13560 (case J 1219, case A 11351 [|Y|>=m+2: 96], case B 990), runs 81360, failures 0 (assertion failures 0)
+  case A, |B| at the end (first-choice run): 0:11351

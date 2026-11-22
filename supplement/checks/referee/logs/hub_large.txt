@@ -1,0 +1,24 @@
+hub n=26: closed connected non-complete graphs 30000 (tries 62704)
+  runs 930000; case1 26679 case2a 3312 case2b 9; |Y|<m runs 0
+  rounds: 0:101477 1:292 2:293 3:245 4:211 5:154
+  FAILURES 0
+hub n=32: closed connected non-complete graphs 30000 (tries 57036)
+  runs 930000; case1 26403 case2a 3589 case2b 8; |Y|<m runs 0
+  rounds: 0:110281 1:240 2:211 3:176 4:156 5:195
+  FAILURES 0
+hub n=40: closed connected non-complete graphs 30000 (tries 53562)
+  runs 930000; case1 26113 case2a 3878 case2b 9; |Y|<m runs 0
+  rounds: 0:119324 1:132 2:146 3:177 4:274 5:165
+  FAILURES 0
+hub n=50: closed connected non-complete graphs 30000 (tries 50307)
+  runs 930000; case1 25915 case2a 4062 case2b 23; |Y|<m runs 0
+  rounds: 0:125138 1:163 2:174 3:127 4:172 5:148
+  FAILURES 0
+hub n=60: closed connected non-complete graphs 30000 (tries 48908)
+  runs 930000; case1 25877 case2a 4108 case2b 15; |Y|<m runs 0
+  rounds: 0:126805 1:115 2:92 3:141 4:75 5:120
+  FAILURES 0
+hub n=64: closed connected non-complete graphs 30000 (tries 48378)
+  runs 930000; case1 25742 case2a 4242 case2b 16; |Y|<m runs 0
+  rounds: 0:130961 1:148 2:94 3:110 4:59 5:130
+  FAILURES 0

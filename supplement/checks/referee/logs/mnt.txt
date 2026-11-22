@@ -1,0 +1,25 @@
+mnt n=10: MNT graphs 300 (not closed: 0), connected ones tested 238
+  runs 1428; case1 106 case2a 116 case2b 16; |Y|<m runs 0
+  rounds: 0:696
+  slack: -5:1 -4:6 -3:25 -2:106 -1:100
+  FAILURES 0
+mnt n=12: MNT graphs 300 (not closed: 0), connected ones tested 250
+  runs 1500; case1 86 case2a 148 case2b 16; |Y|<m runs 0
+  rounds: 0:888
+  slack: -6:2 -5:2 -4:12 -3:24 -2:100 -1:110
+  FAILURES 0
+mnt n=14: MNT graphs 300 (not closed: 0), connected ones tested 265
+  runs 1590; case1 63 case2a 192 case2b 10; |Y|<m runs 0
+  rounds: 0:1152
+  slack: -7:2 -6:2 -5:7 -4:14 -3:27 -2:93 -1:120
+  FAILURES 0
+mnt n=16: MNT graphs 300 (not closed: 0), connected ones tested 255
+  runs 1530; case1 51 case2a 185 case2b 19; |Y|<m runs 0
+  rounds: 0:1110
+  slack: -8:1 -7:4 -6:8 -5:8 -4:8 -3:18 -2:94 -1:114
+  FAILURES 0
+mnt n=18: MNT graphs 300 (not closed: 0), connected ones tested 274
+  runs 1644; case1 44 case2a 213 case2b 17; |Y|<m runs 0
+  rounds: 0:1278
+  slack: -9:1 -8:2 -7:6 -6:2 -5:1 -4:19 -3:30 -2:96 -1:117
+  FAILURES 0

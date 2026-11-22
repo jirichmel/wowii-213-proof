@@ -1,0 +1,5 @@
+localsearch n=12 iters=30000 bestscore=-8 nonF_slack>=-1_hits=0
+localsearch n=13 iters=30000 bestscore=-8 nonF_slack>=-1_hits=0
+localsearch n=14 iters=30000 bestscore=-8 nonF_slack>=-1_hits=0
+localsearch n=15 iters=30000 bestscore=-8 nonF_slack>=-1_hits=0
+localsearch n=16 iters=30000 bestscore=-8 nonF_slack>=-1_hits=0
